@@ -1,2 +1,3 @@
-# github-dark-theme
+# GitHub Dark Theme
+
 Dark mode for GitHub
