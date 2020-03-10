@@ -1,0 +1,319 @@
+@-moz-document regexp("^https://github.com.*") {
+:root {
+  --gray10: #000;
+  --gray20: #1e2022;
+  --gray30: #303234;
+  --gray40: #454647;
+  --gray50: #616161;
+  --gray60: #888;
+
+  --border: #4e4e4e;
+  --border-dark: var(--gray20);
+
+  --font-color: #ddd;
+  --font-color-active: #fff;
+  --font-color-dark: #999;
+
+  --link-color: rgb(85, 156, 248);
+}
+
+body {
+  background-color: var(--gray20);
+  color: var(--font-color);
+}
+
+/**
+ * Text
+ * -------------------------------------
+ */
+.text-gray-dark,
+.text-gray {
+  color: var(--font-color-dark) !important;
+}
+
+/**
+ * Links
+ * -------------------------------------
+ */
+a {
+  color: var(--link-color);
+}
+
+.link-gray-dark {
+  color: var(--font-color) !important;
+}
+
+.link-gray-dark:hover,
+.link-hover-blue:hover {
+  color: var(--font-color-active) !important;
+}
+
+.muted-link {
+  color: var(--font-color-dark) !important;
+}
+
+.muted-link:hover {
+  color: var(--font-color) !important;
+}
+
+.link-gray,
+.link-gray:hover {
+  color: var(--font-color) !important;
+}
+
+/**
+ * Borders
+ * -------------------------------------
+ */
+.border-gray-light {
+  border-color: var(--border) !important;
+}
+
+/**
+ * Header
+ * -------------------------------------
+ */
+.gh-header {
+  background-color: var(--gray20);
+}
+
+.gh-header-number,
+.gh-header-meta {
+  color: var(--font-color-dark);
+}
+
+
+.bg-gray-light {
+  background-color: var(--gray30) !important;
+}
+
+.pagehead {
+  border-color: var(--border);
+}
+
+.repohead .octicon {
+  fill: var(--font-color);
+}
+
+/**
+ * Nav
+ * -------------------------------------
+ */
+.reponav-item {
+  color: var(--font-color);
+}
+
+.reponav-item.selected {
+  background-color: var(--gray20);
+  border-left-color: var(--border);
+  border-right-color: var(--border);
+  color: inherit;
+}
+
+.reponav-item:hover,
+.reponav-item:hover .octicon {
+  color: var(--font-color-active);
+}
+
+.reponav-item .octicon {
+  color: var(--font-color);
+}
+
+.Counter {
+  background-color: var(--gray50);
+  color: var(--font-color) !important;
+}
+
+/**
+ *
+ * Sub nav
+ * -------------------------------------
+ */
+.subnav-item {
+  border-color: var(--border);
+  color: var(--font-color);
+}
+
+.subnav-item:hover {
+  background-color: var(--gray30);
+}
+
+/**
+ *
+ * Boxes
+ * -------------------------------------
+ */
+.Box {
+  background-color: var(--gray30);
+  border-color: var(--border);
+}
+
+.Box-header {
+  background-color: var(--gray40);
+  border-color: var(--border);
+}
+
+.Box-header .text-gray {
+  color: var(--font-color) !important;
+}
+
+.Box-body,
+.Box-row {
+  border-color: var(--border);
+}
+
+.Box-row--focus-gray.navigation-focus {
+  background-color: var(--gray30);
+}
+
+/**
+ *
+ * Tables
+ * -------------------------------------
+ */
+.table-list-header-toggle .btn-link.selected,
+.table-list-header-toggle .btn-link.selected:hover {
+  color: #aaa;
+}
+
+.table-list-header-toggle .btn-link {
+  color: var(--font-color);
+}
+
+.table-list-header-toggle .btn-link:hover {
+  color: var(--font-color-active);
+}
+
+/**
+ * Labels
+ * -------------------------------------
+ */
+.Label--outline {
+  background-color: var(--gray50);
+  border: var(--border);
+  color: var(--font-color);
+}
+
+/**
+ * Buttons
+ * -------------------------------------
+ */
+.btn:not(.btn-primary) {
+  background-color: var(--gray50);
+  background-image: none;
+  color: var(--font-color-active);
+}
+
+.btn:not(.btn-primary) svg {
+  fill: var(--font-color-active);
+}
+
+.social-count {
+  background-color: var(--gray60);
+}
+
+.social-count:hover {
+  color: var(--gray10);
+}
+
+/**
+ * Commits
+ * -------------------------------------
+ */
+.commit-ref {
+  background-color: var(--gray40);
+}
+
+.commit-ref {
+  color: var(--font-color);
+}
+
+/**
+ * Select modal (for filters)
+ * -------------------------------------
+ */
+.SelectMenu-modal,
+.select-menu-modal {
+  background-color: var(--gray50);
+  border-color: var(--border);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
+}
+
+.SelectMenu-list,
+.select-menu-list {
+  border-color: var(--border-dark);
+}
+
+.SelectMenu-item,
+.select-menu-item {
+  background-color: var(--gray40);
+  border-color: #787878;
+  color: var(--font-color);
+}
+
+.SelectMenu-item:hover {
+  background-color: var(--gray50);
+}
+
+/**
+ * Select modal (header buttons)
+ * -------------------------------------
+ */
+.select-menu-header {
+  background-color: var(--gray50);
+}
+
+.select-menu-title {
+  color: var(--font-color) !important;
+}
+
+.select-menu-item-text .description {
+  color: var(--font-color-dark) !important;
+}
+
+.select-menu-item:hover {
+  background-color: var(--gray50) !important;
+}
+
+.select-menu-item[aria-checked=true] {
+  color: var(--font-color-active) !important;
+}
+
+.select-menu-item[aria-checked=true] .description {
+  color: var(--font-color) !important;
+}
+
+.Popover-message--bottom-left:after,
+.Popover-message--bottom-left:before,
+.Popover-message--top-left:after,
+.Popover-message--top-left:before {
+  border-top-color: var(--gray30);
+}
+
+/**
+ * Repo home and code navigation
+ * -------------------------------------
+ */
+.topic-tag {
+  background-color: var(--gray40);
+  color: var(--font-color);
+}
+
+/**
+ * Markdown
+ * -------------------------------------
+ */
+.markdown-body img {
+  background-color: transparent;
+}
+
+.markdown-body table tr {
+  background-color: var(--gray40) !important;
+  border-color: var(--border);
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  border-color: var(--border-dark);
+}
+}
