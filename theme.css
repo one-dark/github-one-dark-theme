@@ -15,6 +15,9 @@
   --font-color-dark: #999;
 
   --link-color: rgb(85, 156, 248);
+  
+  /* As needed, add custom vars here */
+  --timeline-border: var(--gray50);
 }
 
 body {
@@ -26,16 +29,29 @@ body {
  * Text
  * -------------------------------------
  */
+.text-gray-light,
 .text-gray-dark,
 .text-gray {
   color: var(--font-color-dark) !important;
+}
+
+.text-emphasized {
+  color: var(--font-color-active);
+}
+
+kbd {
+  background: var(--gray40);
+  border-color: var(--gray50);
+  box-shadow: inset 0 -1px 0 var(--gray50);
+  color: var(--font-color);
 }
 
 /**
  * Links
  * -------------------------------------
  */
-a {
+a,
+.btn-link {
   color: var(--link-color);
 }
 
@@ -65,8 +81,16 @@ a {
  * Borders
  * -------------------------------------
  */
-.border-gray-light {
+.border-gray-light,
+.border-top,
+.border-bottom,
+.rule,
+hr {
   border-color: var(--border) !important;
+}
+
+.border-md-top {
+  border-color: var(--border-dark) !important;
 }
 
 /**
@@ -82,6 +106,9 @@ a {
   color: var(--font-color-dark);
 }
 
+.gh-header-meta {
+  border-color: var(--border);
+}
 
 .bg-gray-light {
   background-color: var(--gray30) !important;
@@ -125,7 +152,6 @@ a {
 }
 
 /**
- *
  * Sub nav
  * -------------------------------------
  */
@@ -139,7 +165,6 @@ a {
 }
 
 /**
- *
  * Boxes
  * -------------------------------------
  */
@@ -167,10 +192,14 @@ a {
 }
 
 /**
- *
  * Tables
  * -------------------------------------
  */
+.table-list-header {
+  background-color: var(--gray40);
+  border-color: var(--border);
+}
+
 .table-list-header-toggle .btn-link.selected,
 .table-list-header-toggle .btn-link.selected:hover {
   color: #aaa;
@@ -291,11 +320,24 @@ a {
 }
 
 /**
- * Repo home and code navigation
+ * Inputs
  * -------------------------------------
  */
-.topic-tag {
-  background-color: var(--gray40);
+.input-contrast,
+.form-control {
+  border-color: var(--border);
+  color: var(--font-color)
+}
+
+.input-contrast {
+  background-color: var(--gray30) !important;
+}
+
+.form-control {
+  background-color: var(--gray40) !important;
+}
+
+::placeholder {
   color: var(--font-color);
 }
 
@@ -315,5 +357,257 @@ a {
 .markdown-body table td,
 .markdown-body table th {
   border-color: var(--border-dark);
+}
+
+.markdown-body blockquote {
+  color: var(--font-color-dark);
+}
+
+/**
+ * Repo home and code navigation
+ * -------------------------------------
+ */
+.topic-tag {
+  background-color: var(--gray40);
+  color: var(--font-color);
+}
+
+.overall-summary,
+.repository-lang-stats-graph {
+  border-color: var(--border);
+}
+
+.numbers-summary > li a,
+.numbers-summary .octicon {
+  color: var(--font-color);
+}
+
+.numbers-summary > li a:hover,
+.numbers-summary > li a:hover .octicon {
+  color: var(--font-color-active);
+}
+
+.repository-lang-stats .lang {
+  color: var(--font-color) !important;
+}
+
+.repository-lang-stats .percent {
+  color: var(--font-color-dark);
+}
+
+/**
+ * Timeline
+ * -------------------------------------
+ */
+.timeline-comment,
+.timeline-comment-header {
+  border-color: var(--border) !important;
+  color: var(--font-color);
+}
+
+.timeline-comment {
+  background-color: var(--gray30);
+}
+
+.timeline-comment-header {
+  background-color: var(--gray40) !important;
+}
+
+.timeline-comment--caret::before,
+.timeline-comment--caret::after {
+  border-right-color: var(--gray40) !important;
+}
+
+.TimelineItem-badge {
+  background-color: var(--gray30);
+  border-color: var(--timeline-border);
+  color: var(--font-color);
+}
+
+.TimelineItem-body {
+  color: var(--font-color-dark);
+}
+
+.TimelineItem::before {
+  background-color: var(--timeline-border);
+}
+
+.TimelineItem-break {
+  background-color: var(--gray20);
+  border-color: var(--timeline-border);
+}
+
+.comment-reactions.has-reactions {
+  border-color: var(--border);
+}
+
+.comment-reactions .user-has-reacted {
+  background-color: var(--gray40);
+  color: var(--font-color);
+  border-color: var(--border-dark);
+}
+
+/**
+ * Timeline new comment dialog
+ * -------------------------------------
+ */
+.discussion-timeline-actions {
+  background-color: transparent;
+  border-color: var(--timeline-border);
+}
+
+.timeline-comment-wrapper {
+  border-color: transparent;
+}
+
+@media (max-width: 1011px) {
+  .toolbar-commenting {
+    background-color: var(--gray30) !important;
+  }
+}
+
+.drag-and-drop {
+  background-color: transparent;
+  border-color: var(--border);
+  color: var(--font-color-dark);
+}
+
+.upload-enabled textarea {
+  /* Shouldn't really be using font color for border,
+  but it looks better than the border color */
+  border-bottom-color: var(--font-color-dark);
+}
+
+.comment-body {
+  border-color: var(--border) !important;
+}
+
+/**
+ * Tabs
+ * -------------------------------------
+ */
+.tabnav {
+  background-color: var(--gray40) !important;
+  border-color: var(--border-dark) !important;
+}
+
+.tabnav-tab {
+  color: var(--font-color);
+}
+
+.tabnav-tab:hover {
+  color: var(--font-color-active);
+}
+
+.tabnav-tab[aria-selected=true] {
+  background-color: var(--gray30);
+  border-color: var(--border-dark);
+  color: var(--font-color-active);
+}
+
+.toolbar-item {
+  color: var(--font-color);
+}
+
+.toolbar-item:hover {
+  color: var(--font-color-active);
+}
+
+/**
+ * Discussion sidebar
+ * -------------------------------------
+ */
+.discussion-sidebar-heading {
+  color: var(--font-color);
+}
+
+.discussion-sidebar-heading:hover {
+  color: var(--font-color-active);
+}
+
+.discussion-sidebar-item {
+  border-color: var(--border) !important;
+  color: var(--font-color-dark);
+}
+
+.thread-subscription-status {
+  background: var(--gray20);
+}
+
+.note {
+  color: var(--font-color-dark) !important;
+}
+
+/**
+ * Discussion sidebar
+ * -------------------------------------
+ */
+.gh-header-sticky.is-stuck + .gh-header-shadow {
+  background-color: var(--gray40) !important;
+  border-color: var(--border-dark) !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .1) !important;
+}
+
+/**
+ * Menu
+ * -------------------------------------
+ */
+.menu {
+  border-color: var(--border);
+}
+
+.menu-item {
+  background-color: var(--gray30);
+  border-color: var(--border);
+  color: var(--font-color) !important;
+}
+
+.menu-item:hover {
+  background-color: var(--gray40);
+}
+
+.menu-item.selected,
+.menu-item[aria-current],
+.menu-item[aria-selected=true] {
+  background-color: var(--gray40) !important;
+  color: var(--font-color-active) !important;
+}
+
+/**
+ * Files table
+ * -------------------------------------
+ */
+.team-mention,
+.user-mention {
+  color: var(--font-color-active);
+}
+
+/**
+ * Files table
+ * -------------------------------------
+ */
+.commit-tease {
+  color: var(--font-color);
+}
+
+.commit-tease-sha {
+  color: var(--link-color);
+}
+
+table.files td {
+  background-color: var(--gray30);
+  border-color: var(--border);
+}
+
+table.files .navigation-focus td {
+  background-color: var(--gray40) !important;
+  border-color: var(--border);
+}
+
+table.files td.icon,
+table.files td.icon svg,
+table.files td.age,
+table.files td.message a:not(.link-gray) {
+  color: var(--font-color-dark) !important;
 }
 }
