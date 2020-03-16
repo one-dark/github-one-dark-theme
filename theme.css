@@ -31,7 +31,8 @@ body {
  */
 .text-gray-light,
 .text-gray-dark,
-.text-gray {
+.text-gray,
+.bg-yellow-light {
   color: var(--font-color-dark) !important;
 }
 
@@ -39,11 +40,28 @@ body {
   color: var(--font-color-active);
 }
 
+.text-blue {
+  color: var(--link-color) !important;
+}
+
 kbd {
   background: var(--gray40);
   border-color: var(--gray50);
   box-shadow: inset 0 -1px 0 var(--gray50);
   color: var(--font-color);
+}
+
+label {
+  color: var(--font-color);
+}
+
+/**
+ * Backgrounds
+ * -------------------------------------
+ */
+.bg-white {
+  background-color: var(--gray30) !important;
+  border-color: var(--border) !important;
 }
 
 /**
@@ -81,6 +99,7 @@ a,
  * Borders
  * -------------------------------------
  */
+.border,
 .border-gray-light,
 .border-top,
 .border-bottom,
@@ -118,8 +137,8 @@ hr {
   border-color: var(--border);
 }
 
-.repohead .octicon {
-  fill: var(--font-color);
+.repohead h1 .octicon {
+  color: var(--font-color);
 }
 
 /**
@@ -138,7 +157,9 @@ hr {
 }
 
 .reponav-item:hover,
-.reponav-item:hover .octicon {
+.reponav-item:hover .octicon,
+.reponav-item:focus,
+.reponav-item:focus .octicon {
   color: var(--font-color-active);
 }
 
@@ -213,6 +234,11 @@ hr {
   color: var(--font-color-active);
 }
 
+.table-list-bordered,
+.table-list-bordered .table-list-cell {
+  border-color: var(--border) !important;
+}
+
 /**
  * Labels
  * -------------------------------------
@@ -234,7 +260,7 @@ hr {
 }
 
 .btn:not(.btn-primary) svg {
-  fill: var(--font-color-active);
+  color: var(--font-color-active);
 }
 
 .social-count {
@@ -251,10 +277,35 @@ hr {
  */
 .commit-ref {
   background-color: var(--gray40);
+  color: var(--font-color);
 }
 
-.commit-ref {
+.commit-ref a {
+  color: var(--font-color-active);
+}
+
+.commits-listing:before {
+  background-color: var(--timeline-border);
+}
+
+.commit-group-title .octicon-git-commit {
+  background-color: var(--gray20);
+  color: var(--gray60);
+}
+
+.commits-list-item.navigation-focus,
+.commits-list-item[aria-selected=true] {
+  background-color: var(--gray30);
+}
+
+.commit .commit-title,
+.commit .commit-title a,
+.commits-list-item .commit-author {
   color: var(--font-color);
+}
+
+.commits-list-item .commit-meta {
+  color: var(--font-color-dark);
 }
 
 /**
@@ -363,6 +414,11 @@ hr {
   color: var(--font-color-dark);
 }
 
+.markdown-body .highlight pre,
+.markdown-body pre {
+  background-color: var(--gray20);
+}
+
 /**
  * Repo home and code navigation
  * -------------------------------------
@@ -418,10 +474,19 @@ hr {
   border-right-color: var(--gray40) !important;
 }
 
+.timeline-comment-label {
+  /* Shouldn't really be using font color here, but meh */
+  border-color: var(--font-color-dark) !important;
+}
+
 .TimelineItem-badge {
   background-color: var(--gray30);
   border-color: var(--timeline-border);
   color: var(--font-color);
+}
+
+.TimelineItem-badge.bg-green {
+  border-color: #28a745;
 }
 
 .TimelineItem-body {
@@ -430,6 +495,10 @@ hr {
 
 .TimelineItem::before {
   background-color: var(--timeline-border);
+}
+
+.TimelineItem--condensed .TimelineItem-badge {
+  background: var(--gray20);
 }
 
 .TimelineItem-break {
@@ -447,6 +516,10 @@ hr {
   border-color: var(--border-dark);
 }
 
+.signed-commit-badge {
+  border-color: #22863a;
+}
+
 /**
  * Timeline new comment dialog
  * -------------------------------------
@@ -461,7 +534,7 @@ hr {
 }
 
 @media (max-width: 1011px) {
-  .toolbar-commenting {
+  .js-issues-results .toolbar-commenting {
     background-color: var(--gray30) !important;
   }
 }
@@ -511,6 +584,119 @@ hr {
 
 .toolbar-item:hover {
   color: var(--font-color-active);
+}
+
+/**
+ * PR Tabs
+ * -------------------------------------
+ */
+.tabnav-pr {
+  background-color: transparent !important;
+  border-color: var(--border) !important;
+}
+
+.tabnav-pr .tabnav-tab.selected {
+  background-color: var(--gray30);
+  border-color: var(--border);
+}
+
+.tabnav-pr .tabnav-tab {
+  color: var(--font-color) !important;
+}
+
+/**
+ * PR commit list
+ * -------------------------------------
+ */
+.ellipsis-expander,
+.hidden-text-expander a {
+  background-color: var(--gray40);
+  color: var(--font-color);
+}
+
+.ellipsis-expander:hover,
+.hidden-text-expander a:hover {
+  background-color: var(--gray50);
+}
+
+/**
+ * PR merge box
+ * -------------------------------------
+ */
+.branch-action-body,
+.branch-action-body .merge-message,
+.merge-message {
+  background-color: var(--gray30);
+  border-color: var(--border);
+}
+
+.branch-action-item + .branch-action-item,
+.branch-action-item + .mergeability-details {
+  border-color: var(--border);
+}
+
+.merge-status-list {
+  border-color: var(--border);
+}
+
+.status-meta {
+  color: var(--font-color-dark);
+}
+
+.branch-action-body::before {
+  border-right-color: var(--border);
+}
+
+.branch-action-body::after {
+  border-right-color: var(--gray30);
+}
+
+/**
+ * PR merged branch panel
+ * -------------------------------------
+ */
+.merge-pr-more-commits,
+.merge-branch-description {
+  color: var(--font-color-dark);
+}
+
+.merge-branch-heading {
+  color: var(--font-color);
+}
+
+.branch-action-state-closed-dirty .branch-action-body,
+.branch-action-state-dirty .branch-action-body {
+  border-color: var(--border);
+}
+
+.branch-action-state-closed-dirty .branch-action-body::before,
+.branch-action-state-dirty .branch-action-body::before {
+  border-right-color: var(--border);
+}
+
+.merge-status-item {
+  background-color: var(--gray40);
+  border-color: var(--gray30);
+}
+
+/**
+ * PR review comments
+ * -------------------------------------
+ */
+.review-comment {
+  color: var(--font-color);
+}
+
+.review-comment .link-gray {
+  color: var(--font-color-active) !important;
+}
+
+.review-thread-reply {
+  background-color: var(--gray30);
+}
+
+.review-thread-reply .inline-comment-form {
+  background-color: var(--gray30);
 }
 
 /**
@@ -609,5 +795,94 @@ table.files td.icon svg,
 table.files td.age,
 table.files td.message a:not(.link-gray) {
   color: var(--font-color-dark) !important;
+}
+
+/**
+ * Dropdown
+ * -------------------------------------
+ */
+.dropdown-menu {
+  background-color: var(--gray30);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .1) !important;
+}
+
+.dropdown-menu::after {
+  border-bottom-color: var(--gray30);
+}
+
+.dropdown-divider,
+.file-navigation .get-repo-btn {
+  border-color: var(--border) !important;
+}
+
+.dropdown-item {
+  color: var(--font-color);
+}
+
+.dropdown-item:hover {
+  background-color: var(--gray40);
+}
+
+/**
+ * PR file viewing
+ * -------------------------------------
+ */
+.diffbar {
+  background-color: transparent;
+}
+
+.pr-toolbar.is-stuck {
+  background-color: var(--gray40);
+}
+
+.js-reviewed-toggle {
+  color: initial;
+}
+
+/**
+ * File viewing
+ * -------------------------------------
+ */
+.file-header {
+  background-color: var(--gray30);
+}
+
+.file {
+  border-color: var(--border);
+}
+
+.blob-num-context,
+.blob-code-context {
+  background-color: white;
+}
+
+/**
+ * Checks
+ * -------------------------------------
+ */
+.CheckRun-header {
+  border-color: var(--border);
+}
+
+.CheckRun-search .btn[disabled] {
+  background-color: transparent;
+}
+
+.CheckRun-search .btn[disabled] svg {
+  color: var(--font-color-dark);
+}
+
+.CheckRun-search-input:focus {
+  color: var(--font-color-active);
+}
+
+/**
+ * Misc
+ * -------------------------------------
+ */
+.branch-infobar {
+  background-color: var(--gray30);
+  border-color: var(--border);
+  color: var(--font-color);
 }
 }
