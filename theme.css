@@ -67,6 +67,10 @@ label {
   background-color: var(--gray20) !important; 
 }
 
+.bg-blue-light {
+  background-color: var(--gray40) !important; 
+}
+
 /**
  * Links
  * -------------------------------------
@@ -417,6 +421,11 @@ hr {
   color: var(--font-color-dark);
 }
 
+.markdown-body code,
+.markdown-body tt {
+  background-color: var(--gray40);
+}
+
 /**
  * Markdown syntax highlighting
  * -------------------------------------
@@ -531,7 +540,7 @@ pre,
 }
 
 .TimelineItem-body {
-  color: var(--font-color-dark);
+  color: var(--font-color);
 }
 
 .TimelineItem::before {
@@ -568,6 +577,14 @@ pre,
 .discussion-timeline-actions {
   background-color: transparent;
   border-color: var(--timeline-border);
+}
+
+.discussion-topic-header {
+  background-color: var(--gray40);
+}
+
+.discussion-topic-header input {
+  background-color: var(--gray30) !important;
 }
 
 .timeline-comment-wrapper {
@@ -906,6 +923,12 @@ table.files td.message a:not(.link-gray) {
   color: #abb2bf;
 }
 
+.blob-expanded .blob-code, .blob-expanded .blob-num {
+  background-color: #2c313a;   
+  border-top-color: #2c313a !important;
+  color: #abb2bf;
+}
+
 .file-diff-split .empty-cell {
   background-color: #2c313a; 
   border-right-color: var(--border);
@@ -952,6 +975,37 @@ table.files td.message a:not(.link-gray) {
   border-color: var(--border);
 }
 
+.add-line-comment {
+  color: var(--font-color);
+}
+
+.blob-num-expandable .directional-expander {
+  background-color: var(--gray40);
+  color: var(--font-color)
+}
+
+.blob-num-expandable .directional-expander:hover {
+  background-color: var(--gray50);
+}
+
+/**
+ * Selected lines
+ * -------------------------------------
+ */
+.selected-line::after {
+  background-color: #203d4947;
+  border-color: #0e678cbd !important;
+}
+
+/**
+ * PR Misc
+ * -------------------------------------
+ */
+.range-editor {
+  background-color: var(--gray30);
+  border-color: var(--border);
+}
+
 /**
  * Checks
  * -------------------------------------
@@ -973,9 +1027,42 @@ table.files td.message a:not(.link-gray) {
 }
 
 /**
+ * Global search box
+ * -------------------------------------
+ */
+.jump-to-suggestions-results-container .navigation-item {
+  border-color: var(--border);
+}
+
+.jump-to-suggestions-path { 
+  color: var(--font-color);
+}
+
+.navigation-focus .jump-to-suggestions-path {
+  background-color: var(--gray40) !important;
+}
+
+.jump-to-field-active {
+  color: var(--font-color) !important;
+}
+
+.jump-to-field-active::placeholder {
+  color: var(--font-color-dark) !important;
+}
+
+.jump-to-suggestions-results-container mark {
+  color: var(--link-color);
+}
+
+/**
  * Misc
  * -------------------------------------
  */
+.branch-name {
+  background-color: var(--gray40);
+  color: var(--font-color) !important;
+}
+
 .branch-infobar {
   background-color: var(--gray30);
   border-color: var(--border);
