@@ -13,10 +13,7 @@
   --font-color-active: #fff;
   --font-color-dark: #999;
 
-  --link-color: rgb(85, 156, 248);
-  
   /* As needed, add custom vars here */
-  --timeline-border: var(--gray50);
 }
 
 body {
@@ -28,1043 +25,274 @@ body {
  * Text
  * -------------------------------------
  */
-.text-gray-light,
-.text-gray-dark,
-.text-gray,
-.bg-yellow-light {
-  color: var(--font-color-dark) !important;
+.dark-gray {
+  color: var(--font-color-dark);
 }
 
-.text-emphasized {
+.black {
+  color: var(--font-color);
+}
+
+.hover-black:hover {
   color: var(--font-color-active);
-}
-
-.text-blue {
-  color: var(--link-color) !important;
-}
-
-kbd {
-  background: var(--gray40);
-  border-color: var(--gray50);
-  box-shadow: inset 0 -1px 0 var(--gray50);
-  color: var(--font-color);
-}
-
-label {
-  color: var(--font-color);
-}
-
-/**
- * Backgrounds
- * -------------------------------------
- */
-.bg-white {
-  background-color: var(--gray30) !important;
-  border-color: var(--border) !important;
-}
-
-.bg-gray {
-  background-color: var(--gray20) !important; 
-}
-
-.bg-blue-light {
-  background-color: var(--gray40) !important; 
-}
-
-/**
- * Links
- * -------------------------------------
- */
-a,
-.btn-link {
-  color: var(--link-color);
-}
-
-.link-gray-dark {
-  color: var(--font-color) !important;
-}
-
-.link-gray-dark:hover,
-.link-hover-blue:hover {
-  color: var(--font-color-active) !important;
-}
-
-.muted-link {
-  color: var(--font-color-dark) !important;
-}
-
-.muted-link:hover {
-  color: var(--font-color) !important;
-}
-
-.link-gray,
-.link-gray:hover {
-  color: var(--font-color) !important;
 }
 
 /**
  * Borders
  * -------------------------------------
  */
-.border,
-.border-gray-light,
-.border-top,
-.border-bottom,
-.rule,
-hr {
-  border-color: var(--border) !important;
-}
-
-.border-md-top {
-  border-color: var(--border-dark) !important;
-}
-
-/**
- * Header
- * -------------------------------------
- */
-.gh-header {
-  background-color: var(--gray20);
-}
-
-.gh-header-number,
-.gh-header-meta {
-  color: var(--font-color-dark);
-}
-
-.gh-header-meta {
+.border-white,
+.border-gray,
+.border-bottom-child-gray > * {
   border-color: var(--border);
 }
 
-.bg-gray-light {
-  background-color: var(--gray30) !important;
-}
-
-.pagehead {
-  border-color: var(--border);
-}
-
-.repohead h1 .octicon {
-  color: var(--font-color);
-}
-
 /**
- * Nav
+ * Backgrounds
  * -------------------------------------
  */
-.reponav-item {
-  color: var(--font-color);
-}
-
-.reponav-item.selected {
-  background-color: var(--gray20);
-  border-left-color: var(--border);
-  border-right-color: var(--border);
-  color: inherit;
-}
-
-.reponav-item:hover,
-.reponav-item:hover .octicon,
-.reponav-item:focus,
-.reponav-item:focus .octicon {
-  color: var(--font-color-active);
-}
-
-.reponav-item .octicon {
-  color: var(--font-color);
-}
-
-.Counter {
-  background-color: var(--gray50);
-  color: var(--font-color) !important;
-}
-
-/**
- * Sub nav
- * -------------------------------------
- */
-.subnav-item {
-  border-color: var(--border);
-  color: var(--font-color);
-}
-
-.subnav-item:hover {
-  background-color: var(--gray30);
-}
-
-/**
- * Boxes
- * -------------------------------------
- */
-.Box {
-  background-color: var(--gray30);
-  border-color: var(--border);
-}
-
-.Box-header {
+.bg-gray {
   background-color: var(--gray40);
-  border-color: var(--border);
 }
 
-.Box-header .text-gray {
-  color: var(--font-color) !important;
-}
-
-.Box-body,
-.Box-row {
-  border-color: var(--border);
-}
-
-.Box-row--focus-gray.navigation-focus {
+.bg-white,
+.bg-silver {
   background-color: var(--gray30);
+  color: var(--font-color);
 }
 
-/**
- * Tables
- * -------------------------------------
- */
-.table-list-header {
+.hover-bg-silver:hover,
+.hover-bg-silver:focus {
   background-color: var(--gray40);
-  border-color: var(--border);
-}
-
-.table-list-header-toggle .btn-link.selected,
-.table-list-header-toggle .btn-link.selected:hover {
-  color: #aaa;
-}
-
-.table-list-header-toggle .btn-link {
-  color: var(--font-color);
-}
-
-.table-list-header-toggle .btn-link:hover {
-  color: var(--font-color-active);
-}
-
-.table-list-bordered,
-.table-list-bordered .table-list-cell {
-  border-color: var(--border) !important;
-}
-
-/**
- * Labels
- * -------------------------------------
- */
-.Label--outline {
-  background-color: var(--gray50);
-  border: var(--border);
-  color: var(--font-color);
 }
 
 /**
  * Buttons
  * -------------------------------------
  */
-.btn:not(.btn-primary) {
-  background-color: var(--gray50);
-  background-image: none;
-  color: var(--font-color-active);
-}
-
-.btn:not(.btn-primary) svg {
-  color: var(--font-color-active);
-}
-
-.social-count {
-  background-color: var(--gray60);
-}
-
-.social-count:hover {
-  color: var(--gray10);
+.btn-default {
+  background-color: var(--gray30);
+  border-color: var(--gray40);
+  color: var(--font-color) !important;
 }
 
 /**
- * Commits
+ * Forms
  * -------------------------------------
  */
-.commit-ref {
+.input {
   background-color: var(--gray40);
+  border-color: var(--gray50);
+  color: var(--font-color) !important;
+}
+
+.input::placeholder {
+  color: var(--font-color-dark);
+}
+
+.input.borderless,
+.input.borderless:focus {
+  border-color: var(--gray40);
+}
+
+select.form-control {
+  background-color: var(--gray40);
+  border-color: var(--gray50);
+  color: var(--font-color) !important;
+}
+
+/**
+ * Panels
+ * -------------------------------------
+ */
+.panel {
+  background-color: var(--gray30);
+  border-color: var(--border);
+}
+
+.panel-default > .panel-heading {
+  background-color: var(--gray40) !important;
+  border-color: var(--border);
   color: var(--font-color);
 }
 
-.commit-ref a {
-  color: var(--font-color-active);
+.build-panel.panel-success .panel-footer {
+  background-color: var(--gray30);
+  border-color: var(--border);
 }
 
-.commits-listing:before {
-  background-color: var(--timeline-border);
+.panel-footer,
+.panel .table {
+  border-color: var(--border) !important;
 }
 
-.commit-group-title .octicon-git-commit {
+.build-row {
+  border-color: var(--border);
+}
+
+.build-row:hover {
+  background-color: var(--gray40) !important;
+  color: var(--font-color);
+}
+
+/**
+ * Code
+ * -------------------------------------
+ */
+.annotation-body code,
+.annotation-body pre {
+  background-color: var(--gray50);
+  border-color: var(--gray50);
+  color: var(--font-color);
+}
+
+.code--boxed,
+pre.code {
   background-color: var(--gray20);
-  color: var(--gray60);
 }
 
-.commits-list-item.navigation-focus,
-.commits-list-item[aria-selected=true] {
-  background-color: var(--gray30);
-}
-
-.commit .commit-title,
-.commit .commit-title a,
-.commits-list-item .commit-author {
-  color: var(--font-color);
-}
-
-.commits-list-item .commit-meta {
-  color: var(--font-color-dark);
-}
-
-/**
- * Select modal (for filters)
- * -------------------------------------
- */
-.SelectMenu-modal,
-.select-menu-modal {
-  background-color: var(--gray50);
+.code--boxed,
+code.code,
+pre.code {
   border-color: var(--border);
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
-}
-
-.SelectMenu-list,
-.select-menu-list {
-  border-color: var(--border-dark);
-}
-
-.SelectMenu-item,
-.select-menu-item {
-  background-color: var(--gray40);
-  border-color: #787878;
-  color: var(--font-color);
-}
-
-.SelectMenu-item:hover {
-  background-color: var(--gray50);
 }
 
 /**
- * Select modal (header buttons)
+ * Build Summary
  * -------------------------------------
  */
-.select-menu-header {
-  background-color: var(--gray50);
+.build-pipeline-job,
+.build-pipeline-job.build-pipeline-state-broken {
+  background-color: var(--gray40);  
+  border-color: var(--border);
 }
 
-.select-menu-title {
-  color: var(--font-color) !important;
+.build-pipeline-job.build-pipeline-state-passed {
+  background-color: #bbdaae;
+  border-color: #bbdaae;
 }
 
-.select-menu-item-text .description {
-  color: var(--font-color-dark) !important;
+.build-pipeline-job.build-pipeline-state-failed,
+.build-pipeline-job.build-pipeline-state-failed-soft,
+.build-pipeline-job.build-pipeline-state-waiting_failed,
+.build-pipeline-job.build-pipeline-state-blocked_failed,
+.build-pipeline-job.build-pipeline-state-unblocked_failed {
+  border-color: #ffe9e9;
 }
 
-.select-menu-item:hover {
-  background-color: var(--gray50) !important;
+a.build-pipeline-job-manual:hover {
+  color: black;
 }
 
-.select-menu-item[aria-checked=true] {
+/**
+ * Build Step
+ * -------------------------------------
+ */
+.build-details-pipeline-job-state-passed,
+.build-details-pipeline-job-state-passed .build-details-pipeline-job-body {
+  border-color: #69A76A !important;
+}
+
+.job-list-pipeline .build-details-pipeline-job {
+  border-color: var(--border);
+}
+
+/**
+ * Build Step Errors
+ * -------------------------------------
+ */
+.build-details-pipeline-job-state-failed,
+.build-details-pipeline-job-state-failed .build-details-pipeline-job-body {
+  border-color: #b94a48 !important;
+}
+
+.build-details-pipeline-job-state-failed > a {
+  background-color: #b94a48 !important;
   color: var(--font-color-active) !important;
 }
 
-.select-menu-item[aria-checked=true] .description {
-  color: var(--font-color) !important;
+.build-details-pipeline-job-state-failed .build-details-pipeline-icon {
+  color: var(--font-color-active) !important;
 }
 
-.Popover-message--bottom-left:after,
-.Popover-message--bottom-left:before,
-.Popover-message--top-left:after,
-.Popover-message--top-left:before {
-  border-top-color: var(--gray30);
+.build-details-pipeline-job-state-failed .dark-gray { 
+  color: var(--gray20) !important;
 }
 
 /**
- * Inputs
+ * Retry groups
  * -------------------------------------
  */
-.input-contrast,
-.form-control {
-  border-color: var(--border);
-  color: var(--font-color)
-}
-
-.input-contrast {
-  background-color: var(--gray30) !important;
-}
-
-.form-control {
-  background-color: var(--gray40) !important;
-}
-
-::placeholder {
-  color: var(--font-color);
+.job-retry-group-first .build-details-pipeline-job__header {
+  box-shadow: none !important;
 }
 
 /**
- * Markdown
+ * Build Step Contents
  * -------------------------------------
  */
-.markdown-body img {
-  background-color: transparent;
-}
-
-.markdown-body table tr {
-  background-color: var(--gray40) !important;
+.job-list-pipeline .build-details-pipeline-job-body {
   border-color: var(--border);
+  background-color: var(--gray30)
 }
 
-.markdown-body table td,
-.markdown-body table th {
-  border-color: var(--border-dark);
+.JobLogOutputComponent__Controls {
+  box-shadow: none;
 }
 
-.markdown-body blockquote {
-  color: var(--font-color-dark);
-}
-
-.markdown-body code,
-.markdown-body tt {
+/**
+ * Backgrounds
+ * -------------------------------------
+ */
+.Dialog__Backdrop {
   background-color: var(--gray40);
 }
 
-/**
- * Markdown syntax highlighting
- * -------------------------------------
- */
-.markdown-body .highlight pre,
-.markdown-body pre {
-  background-color: #282c34;
-}
-
-pre,
-.pl-s .pl-s1,
-.pl-smi,
-.pl-mb {
-  color: #abb2bf;
-}
-
-.pl-pds,
-.pl-s,
-.pl-s .pl-pse .pl-s1,
-.pl-sr,
-.pl-sr .pl-cce,
-.pl-sr .pl-sra,
-.pl-sr .pl-sre {
-  color: #98c379;
-}
-
-.pl-c1,
-.pl-s .pl-v {
-  color: #d19a66;
-}
-
-.pl-en {
-  color: #61afef;
-}
-
-.pl-k {
-  color: #c678dd;
-}
-
-.pl-c {
-  color: #5c6370;
-}
-
-/**
- * Repo home and code navigation
- * -------------------------------------
- */
-.topic-tag {
-  background-color: var(--gray40);
-  color: var(--font-color);
-}
-
-.overall-summary,
-.repository-lang-stats-graph {
-  border-color: var(--border);
-}
-
-.numbers-summary > li a,
-.numbers-summary .octicon {
-  color: var(--font-color);
-}
-
-.numbers-summary > li a:hover,
-.numbers-summary > li a:hover .octicon {
-  color: var(--font-color-active);
-}
-
-.repository-lang-stats .lang {
-  color: var(--font-color) !important;
-}
-
-.repository-lang-stats .percent {
-  color: var(--font-color-dark);
-}
-
-/**
- * Timeline
- * -------------------------------------
- */
-.timeline-comment,
-.timeline-comment-header {
-  border-color: var(--border) !important;
-  color: var(--font-color);
-}
-
-.timeline-comment {
-  background-color: var(--gray30);
-}
-
-.timeline-comment-header {
-  background-color: var(--gray40) !important;
-}
-
-.timeline-comment--caret::before,
-.timeline-comment--caret::after {
-  border-right-color: var(--gray40) !important;
-}
-
-.timeline-comment-label {
-  /* Shouldn't really be using font color here, but meh */
-  border-color: var(--font-color-dark) !important;
-}
-
-.TimelineItem-badge {
-  background-color: var(--gray30);
-  border-color: var(--timeline-border);
-  color: var(--font-color);
-}
-
-.TimelineItem-badge.bg-green {
-  border-color: #28a745;
-}
-
-.TimelineItem-body {
-  color: var(--font-color);
-}
-
-.TimelineItem::before {
-  background-color: var(--timeline-border);
-}
-
-.TimelineItem--condensed .TimelineItem-badge {
-  background: var(--gray20);
-}
-
-.TimelineItem-break {
+.Dialog__Box {
   background-color: var(--gray20);
-  border-color: var(--timeline-border);
 }
 
-.comment-reactions.has-reactions {
-  border-color: var(--border);
-}
-
-.comment-reactions .user-has-reacted {
+.Dialog__CloseButton {
   background-color: var(--gray40);
-  color: var(--font-color);
-  border-color: var(--border-dark);
-}
-
-.signed-commit-badge {
-  border-color: #22863a;
-}
-
-/**
- * Timeline new comment dialog
- * -------------------------------------
- */
-.discussion-timeline-actions {
-  background-color: transparent;
-  border-color: var(--timeline-border);
-}
-
-.discussion-topic-header {
-  background-color: var(--gray40);
-}
-
-.discussion-topic-header input {
-  background-color: var(--gray30) !important;
-}
-
-.timeline-comment-wrapper {
-  border-color: transparent;
-}
-
-@media (max-width: 1011px) {
-  .js-issues-results .toolbar-commenting {
-    background-color: var(--gray30) !important;
-  }
-}
-
-.drag-and-drop {
-  background-color: transparent;
-  border-color: var(--border);
-  color: var(--font-color-dark);
-}
-
-.upload-enabled textarea {
-  /* Shouldn't really be using font color for border,
-  but it looks better than the border color */
-  border-bottom-color: var(--font-color-dark);
-}
-
-.comment-body {
-  border-color: var(--border) !important;
-}
-
-/**
- * Tabs
- * -------------------------------------
- */
-.tabnav {
-  background-color: var(--gray40) !important;
-  border-color: var(--border-dark) !important;
-}
-
-.tabnav-tab {
+  border-color: var(--gray40);
   color: var(--font-color);
 }
 
-.tabnav-tab:hover {
-  color: var(--font-color-active);
-}
-
-.tabnav-tab[aria-selected=true] {
-  background-color: var(--gray30);
-  border-color: var(--border-dark);
-  color: var(--font-color-active);
-}
-
-.toolbar-item {
-  color: var(--font-color);
-}
-
-.toolbar-item:hover {
-  color: var(--font-color-active);
-}
-
 /**
- * PR Tabs
+ * Dashboard
  * -------------------------------------
  */
-.tabnav-pr {
-  background-color: transparent !important;
-  border-color: var(--border) !important;
-}
-
-.tabnav-pr .tabnav-tab.selected {
-  background-color: var(--gray30);
-  border-color: var(--border);
-}
-
-.tabnav-pr .tabnav-tab {
-  color: var(--font-color) !important;
-}
-
-/**
- * PR commit list
- * -------------------------------------
- */
-.ellipsis-expander,
-.hidden-text-expander a {
-  background-color: var(--gray40);
-  color: var(--font-color);
-}
-
-.ellipsis-expander:hover,
-.hidden-text-expander a:hover {
-  background-color: var(--gray50);
-}
-
-/**
- * PR merge box
- * -------------------------------------
- */
-.branch-action-body,
-.branch-action-body .merge-message,
-.merge-message {
-  background-color: var(--gray30);
-  border-color: var(--border);
-}
-
-.branch-action-item + .branch-action-item,
-.branch-action-item + .mergeability-details {
-  border-color: var(--border);
-}
-
-.merge-status-list {
-  border-color: var(--border);
-}
-
-.status-meta {
-  color: var(--font-color-dark);
-}
-
-.branch-action-body::before {
-  border-right-color: var(--border);
-}
-
-.branch-action-body::after {
-  border-right-color: var(--gray30);
-}
-
-/**
- * PR merged branch panel
- * -------------------------------------
- */
-.merge-pr-more-commits,
-.merge-branch-description {
-  color: var(--font-color-dark);
-}
-
-.merge-branch-heading {
-  color: var(--font-color);
-}
-
-.branch-action-state-closed-dirty .branch-action-body,
-.branch-action-state-dirty .branch-action-body {
-  border-color: var(--border);
-}
-
-.branch-action-state-closed-dirty .branch-action-body::before,
-.branch-action-state-dirty .branch-action-body::before {
-  border-right-color: var(--border);
-}
-
-.merge-status-item {
-  background-color: var(--gray40);
-  border-color: var(--gray30);
-}
-
-/**
- * PR review comments
- * -------------------------------------
- */
-.review-comment {
-  color: var(--font-color);
-}
-
-.review-comment .link-gray {
-  color: var(--font-color-active) !important;
-}
-
-.review-thread-reply {
+.items-stretch {
   background-color: var(--gray30);
 }
 
-.review-thread-reply .inline-comment-form {
-  background-color: var(--gray30);
-}
-
-/**
- * Discussion sidebar
- * -------------------------------------
- */
-.discussion-sidebar-heading {
-  color: var(--font-color);
-}
-
-.discussion-sidebar-heading:hover {
-  color: var(--font-color-active);
-}
-
-.discussion-sidebar-item {
-  border-color: var(--border) !important;
-  color: var(--font-color-dark);
-}
-
-.thread-subscription-status {
-  background: var(--gray20);
-}
-
-.note {
-  color: var(--font-color-dark) !important;
-}
-
-/**
- * Discussion sidebar
- * -------------------------------------
- */
-.gh-header-sticky.is-stuck + .gh-header-shadow {
-  background-color: var(--gray40) !important;
-  border-color: var(--border-dark) !important;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .1) !important;
-}
-
-/**
- * Menu
- * -------------------------------------
- */
-.menu {
-  border-color: var(--border);
-}
-
-.menu-item {
-  background-color: var(--gray30);
-  border-color: var(--border);
-  color: var(--font-color) !important;
-}
-
-.menu-item:hover {
-  background-color: var(--gray40);
-}
-
-.menu-item.selected,
-.menu-item[aria-current],
-.menu-item[aria-selected=true] {
-  background-color: var(--gray40) !important;
-  color: var(--font-color-active) !important;
-}
-
-/**
- * Files table
- * -------------------------------------
- */
-.team-mention,
-.user-mention {
-  color: var(--font-color-active);
-}
-
-/**
- * Files table
- * -------------------------------------
- */
-.commit-tease {
-  color: var(--font-color);
-}
-
-.commit-tease-sha {
-  color: var(--link-color);
-}
-
-table.files td {
-  background-color: var(--gray30);
-  border-color: var(--border);
-}
-
-table.files .navigation-focus td {
+/* Because there isn't a non-generated class name for dropdowns, we use the generated one if it exists. */
+.jbDAzK,
+.Dropdown-showing > div {
   background-color: var(--gray40) !important;
   border-color: var(--border);
-}
-
-table.files td.icon,
-table.files td.icon svg,
-table.files td.age,
-table.files td.message a:not(.link-gray) {
-  color: var(--font-color-dark) !important;
-}
-
-/**
- * Dropdown
- * -------------------------------------
- */
-.dropdown-menu {
-  background-color: var(--gray30);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, .1) !important;
-}
-
-.dropdown-menu::after {
-  border-bottom-color: var(--gray30);
-}
-
-.dropdown-divider,
-.file-navigation .get-repo-btn {
-  border-color: var(--border) !important;
-}
-
-.dropdown-item {
   color: var(--font-color);
 }
 
-.dropdown-item:hover {
-  background-color: var(--gray40);
-}
-
-/**
- * PR file viewing
- * -------------------------------------
- */
-.diffbar {
-  background-color: transparent;
-}
-
-.pr-toolbar.is-stuck {
-  background-color: var(--gray40);
-}
-
-.js-reviewed-toggle {
-  color: initial;
-}
-
-/**
- * File viewing
- * -------------------------------------
- */
-.file-header {
-  background-color: var(--gray30);
-  border-color: var(--border);
-}
-
-.file {
-  border-color: var(--border);
-}
-
-.blob-num-expandable,
-.blob-num-hunk,
-.blob-code-hunk {
-  background-color: #282c34; 
-  color: var(--font-color-dark);
-}
-
-.blob-num-context,
-.blob-code-context {
-  background-color: #282c34;
-  color: #abb2bf;
-}
-
-.blob-expanded .blob-code, .blob-expanded .blob-num {
-  background-color: #2c313a;   
-  border-top-color: #2c313a !important;
-  color: #abb2bf;
-}
-
-.file-diff-split .empty-cell {
-  background-color: #2c313a; 
-  border-right-color: var(--border);
-}
-
-.blob-code-addition,
-.blob-num-addition {
-  background-color: #203d49;
-}
-
-.blob-code-addition .x {
-  background-color: #0e678c; 
-  color: #abb2bf;
-}
-
-.blob-code-deletion,
-.blob-num-deletion {
-  background-color: #53192a;
-}
-
-.blob-code-deletion .x {
-  background-color: #8e0b31;
-  color: #abb2bf;
-}
-
-.blob-num-addition,
-.blob-num-deletion {
-  color: var(--font-color-dark); 
-}
-
-.file-diff-split .blob-code + .blob-num {
-  border-color: var(--border);
-}
-
-.blob-code-inner {
-  color: #abb2bf;
-}
-
-.js-diff-load-container path {
-  fill: var(--gray30);
-}
-
-.diff-table tr:not(:last-child) .line-comments {
-  border-color: var(--border);
-}
-
-.add-line-comment {
-  color: var(--font-color);
-}
-
-.blob-num-expandable .directional-expander {
-  background-color: var(--gray40);
-  color: var(--font-color)
-}
-
-.blob-num-expandable .directional-expander:hover {
-  background-color: var(--gray50);
-}
-
-/**
- * Selected lines
- * -------------------------------------
- */
-.selected-line::after {
-  background-color: #203d4947;
-  border-color: #0e678cbd !important;
-}
-
-/**
- * PR Misc
- * -------------------------------------
- */
-.range-editor {
-  background-color: var(--gray30);
-  border-color: var(--border);
-}
-
-/**
- * Checks
- * -------------------------------------
- */
-.CheckRun-header {
-  border-color: var(--border);
-}
-
-.CheckRun-search .btn[disabled] {
-  background-color: transparent;
-}
-
-.CheckRun-search .btn[disabled] svg {
-  color: var(--font-color-dark);
-}
-
-.CheckRun-search-input:focus {
-  color: var(--font-color-active);
-}
-
-/**
- * Global search box
- * -------------------------------------
- */
-.jump-to-suggestions-results-container .navigation-item {
-  border-color: var(--border);
-}
-
-.jump-to-suggestions-path { 
-  color: var(--font-color);
-}
-
-.navigation-focus .jump-to-suggestions-path {
-  background-color: var(--gray40) !important;
-}
-
-.jump-to-field-active {
-  color: var(--font-color) !important;
-}
-
-.jump-to-field-active::placeholder {
-  color: var(--font-color-dark) !important;
-}
-
-.jump-to-suggestions-results-container mark {
-  color: var(--link-color);
+.jbDAzK > img,
+.Dropdown-showing > div > img {
+  border: 14px solid transparent;
+  border-bottom-color: var(--gray40);
+  height: 0;
+  top: -28px;
+  width: 0; 
 }
 
 /**
  * Misc
  * -------------------------------------
  */
-.branch-name {
-  background-color: var(--gray40);
-  color: var(--font-color) !important;
-}
-
-.branch-infobar {
-  background-color: var(--gray30);
+.badge {
+  background-color: var(--gray40) !important;
   border-color: var(--border);
   color: var(--font-color);
+}
+
+.btn-tab--monochrome.btn-tab--active {
+  border-color: white !important;
 }
