@@ -1,23 +1,22 @@
 :root {
-  --white-1: #1e2022;
-  --white-2: #303234;
-  --white-3: #454647;
-  --white-4: #616161;
-  --white-5: #3a3c3d;
-  --white-6: #524f4f;
-  --white-7: #767676;
-  --black-1: #fff;
-  --black-2: #b2b6bb;
-  --black-3: #d1d5da;
-  --black-3: #b5bac1;
-  --black-4: #969a9f;
-  --blue-1: #559cf8;
-  --blue-2: #27364a;
-  --blue-3: #263242;
-  --blue-4: #34465f;
-
+  --white-1: #fff;
+  --white-2: #f6f8fa;
+  --white-3: #e1e4e8;
+  --white-4: #d1d5da;
+  --white-5: #eaecef;
+  --white-6: #dfe2e5;
+  --white-7: #ccc;
+  --black-1: #24292e;
+  --black-2: #6a737d;
+  --black-3: #586069;
+  --black-4: #444d56;
+  --blue-1: #0366d6;
+  --blue-2: #eaf5ff;
+  --blue-3: #f1f8ff;
+  --blue-4: #def;
+  
   --box-shadow: #9b9b9b26;
-
+  
   /* Syntax highlighting */
   --s-background: #282c34;
   --s-context: #2c313a;
@@ -32,6 +31,27 @@
   --s-stone: #5c6370;
   --s-violet: #c678dd;
   --s-whiskey: #d19a66;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white-1: #1e2022;
+    --white-2: #303234;
+    --white-3: #454647;
+    --white-4: #616161;
+    --white-5: #3a3c3d;
+    --white-6: #524f4f;
+    --white-7: #767676;
+    --black-1: #fff;
+    --black-2: #b2b6bb;
+    --black-3: #d1d5da;
+    --black-3: #b5bac1;
+    --black-4: #969a9f;
+    --blue-1: #559cf8;
+    --blue-2: #27364a;
+    --blue-3: #263242;
+    --blue-4: #34465f;
+  }
 }
 
 body {
@@ -136,17 +156,33 @@ a,
 /** Buttons */
 /** TODO */
 .btn:not(.btn-primary) {
+  border-color: var(--white-6);
+}
+
+.btn:not(.btn-primary):not(.btn-outline) {
   background-color: var(--white-3);
   background-image: linear-gradient(-180deg, #696464, var(--white-6) 90%);
-  border-color: var(--white-6);
   color: var(--black-1);
 }
 
-.btn:not(.btn-primary).hover,
-.btn:not(.btn-primary):hover {
+.btn:not(.btn-primary):not(.btn-outline).hover,
+.btn:not(.btn-primary):not(.btn-outline):hover {
   background-color: var(--white-4);
   background-image: linear-gradient(-180deg, #635e5e, #4d4b4b 90%);
   border-color: var(--white-4);
+}
+
+.btn-outline {
+  background-color: var(--white-1);
+  color: var(--blue-1);
+}
+
+.btn-outline.selected,
+.btn-outline:active,
+.btn-outline:hover,
+.btn-outline[aria-selected=true],
+[open] > .btn-outline {
+  border-color: #0366d6;
 }
 
 /** Forms */
@@ -319,7 +355,7 @@ a,
   .SelectMenu-tab:not([aria-checked=true]):hover {
     background-color: var(--white-1);
   }
-
+  
   .SelectMenu-tab:not([aria-selected=true]):hover {
     background-color: var(--white-3);
     color: var(--black-1);
@@ -469,6 +505,15 @@ a.branch-name {
 
 .repository-lang-stats-graph {
   border-color: var(--white-4);
+}
+
+.repository-lang-stats ol.repository-lang-stats-numbers li .lang {
+  color: var(--black-1);
+}
+
+.repository-lang-stats ol.repository-lang-stats-numbers li > a,
+.repository-lang-stats ol.repository-lang-stats-numbers li > span {
+  color: var(--black-2);
 }
 
 /** File table */
@@ -769,6 +814,11 @@ table.files td.age {
   color: var(--black-3);
 }
 
+.timeline-comment.current-user .previewable-comment-form .comment-form-head.tabnav {
+  background-color: var(--blue-3);
+  border-color: var(--blue-4);
+}
+
 .timeline-comment.current-user .timeline-comment-header {
   background-color: var(--blue-3);
   border-color: var(--blue-4);
@@ -801,7 +851,7 @@ table.files td.age {
 
 .branch-action-state-closed-dirty .branch-action-body,
 .branch-action-state-dirty .branch-action-body,
-.is-rebasing .branch-action-state-dirty-if-rebasing .branch-action-body {
+.is-rebasing .branch-action-state-dirty-if-rebasing .branch-action-body { 
   border-color: var(--white-4);
 }
 
@@ -965,6 +1015,28 @@ table.files td.age {
 .select-menu-item.selected,
 details-menu .select-menu-item[aria-checked=true],
 details-menu .select-menu-item[aria-selected=true] {
+  color: var(--black-1);
+}
+
+.select-menu-tabs {
+  border-color: var(--white-6);
+}
+
+.select-menu-tabs .select-menu-tab-nav.selected,
+.select-menu-tabs .select-menu-tab-nav[aria-selected=true],
+.select-menu-tabs a.selected, .select-menu-tabs a[aria-selected=true] {
+  background-color: var(--white-1);
+  border-color: var(--white-6) var(--white-6) var(--white-1);
+  color: var(--black-1);
+}
+
+.select-menu-tabs .select-menu-tab-nav,
+.select-menu-tabs a {
+  color: var(--black-2);
+}
+
+.select-menu-tabs .select-menu-tab-nav:hover,
+.select-menu-tabs a:hover {
   color: var(--black-1);
 }
 
@@ -1132,6 +1204,68 @@ pre,
 
 .pl-c {
   color: var(--s-stone);
+}
+
+/** Commit range comparison */
+.range-editor {
+  background-color: var(--white-2);
+  border-color: var(--white-3);
+}
+
+.range-editor-icon {
+  color: var(--black-3);
+}
+
+ul.comparison-list {
+  background-color: var(--white-1);
+  border-color: var(--white-6);
+}
+
+ul.comparison-list > li {
+  border-color: var(--white-5);
+}
+
+ul.comparison-list > li.title {
+  background-color: var(--white-2);
+  color: var(--black-2);
+}
+
+ul.comparison-list > li em {
+  color: var(--black-3);
+}
+
+/** PR commits tab */
+.table-list-bordered,
+.table-list-bordered .table-list-cell:first-child {
+  border-color: var(--white-5);
+}
+
+.table-list-cell {
+  border-color: var(--white-3);
+}
+
+.commit .commit-title,
+.commit .commit-title a {
+  color: var(--black-4);
+}
+
+.commits-list-item .commit-meta,
+.commits-list-item .commit-author {
+  color: var(--black-3);
+}
+
+.commits-list-item.navigation-focus,
+.commits-list-item[aria-selected=true] {
+  background-color: var(--white-2);
+}
+
+.commit-group-title .octicon-git-commit {
+  background-color: var(--white-1);
+  color: var(--white-7);
+}
+
+.commits-listing:before {
+  background-color: var(--white-3);
 }
 
 /** Misc */
