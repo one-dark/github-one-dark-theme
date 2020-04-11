@@ -14,6 +14,7 @@
   --blue-2: #eaf5ff;
   --blue-3: #f1f8ff;
   --blue-4: #def;
+  --blue-5: #c0d3ea;
   
   --box-shadow: #9b9b9b26;
   
@@ -42,7 +43,7 @@
     --white-5: #3a3c3d;
     --white-6: #524f4f;
     --white-7: #767676;
-    --black-1: #fff;
+    --black-1: #dfdfdf;
     --black-2: #b2b6bb;
     --black-3: #d1d5da;
     --black-3: #b5bac1;
@@ -51,6 +52,7 @@
     --blue-2: #27364a;
     --blue-3: #263242;
     --blue-4: #34465f;
+    --blue-5: #405675;
   }
 }
 
@@ -61,6 +63,10 @@ body {
 
 .rule, hr {
   border-color: var(--white-6);
+}
+
+.form-hr {
+  border-color: var(--white-5);
 }
 
 kbd {
@@ -134,6 +140,10 @@ a,
   color: var(--white-1);
 }
 
+.text-blue {
+  color: var(--blue-1) !important;
+}
+
 /** Borders */
 .border,
 .border-bottom,
@@ -145,6 +155,10 @@ a,
 
 .border-gray-dark {
   border-color: var(--white-4) !important;
+}
+
+.border-gray-light {
+  border-color: var(--white-5) !important;
 }
 
 @media (min-width: 768px) {
@@ -177,12 +191,31 @@ a,
   color: var(--blue-1);
 }
 
+.btn-outline.disabled,
+.btn-outline:disabled,
+.btn-outline[aria-disabled=true] {
+  background-color: var(--white-1);
+  border-color: var(--white-3) !important;
+  color: var(--black-4);
+}
+
 .btn-outline.selected,
 .btn-outline:active,
 .btn-outline:hover,
 .btn-outline[aria-selected=true],
 [open] > .btn-outline {
   border-color: #0366d6;
+}
+
+.btn-danger {
+  background-image: linear-gradient(-180deg, #cb2431, #941a24 90%) !important;
+  border-color: #b31a26 !important;
+  color: #fff !important;
+}
+
+.btn-danger:hover {
+  background-color: #cb2431;
+  background-image: linear-gradient(-180deg, #de4450, #cb2431 90%) !important;
 }
 
 /** Forms */
@@ -197,10 +230,12 @@ a,
   color: var(--black-1);
 }
 
+.form-group .form-control,
 .input-contrast {
   background-color: var(--white-2);
 }
 
+.form-group .form-control:focus,
 .input-contrast:focus {
   background-color: var(--white-1);
 }
@@ -221,6 +256,10 @@ a,
 
 .gh-header-number {
   color: var(--black-2);
+}
+
+.Subhead {
+  border-color: var(--white-3);
 }
 
 /** Boxes */
@@ -252,6 +291,12 @@ a,
 
 .Box-footer {
   border-color: var(--white-3);
+}
+
+.Box--danger,
+.Box--danger .Box-body:last-of-type,
+.Box--danger .Box-row:first-of-type {
+  border-color: #d73a49;
 }
 
 /** Tables */
@@ -335,6 +380,11 @@ a,
   border-color: var(--white-3);
 }
 
+.SelectMenu-footer {
+  border-color: var(--white-3);
+  color: var(--black-2);
+}
+
 .SelectMenu-tab {
   color: var(--black-2);
 }
@@ -373,6 +423,23 @@ a,
 }
 
 /** Popover */
+.Popover-message:after {
+  border-bottom-color: var(--white-1);
+}
+
+.Popover-message:before {
+  border-bottom-color: var(--white-4);
+}
+
+.Popover-message--bottom-left:after,
+.Popover-message--bottom-left:before,
+.Popover-message--bottom-right:after,
+.Popover-message--bottom-right:before,
+.Popover-message--bottom:after,
+.Popover-message--bottom:before {
+  border-bottom-color: transparent;
+}
+
 .Popover-message--bottom-left:after,
 .Popover-message--bottom-right:after,
 .Popover-message--bottom:after {
@@ -422,6 +489,7 @@ the consistent color palette. */
 /** Tags */
 .branch-name {
   background-color: var(--blue-2);
+  color: var(--blue-1);
 }
 
 a.branch-name {
@@ -547,6 +615,10 @@ table.files td.age {
   color: var(--black-2);
 }
 
+table.files tr.up-tree a:hover {
+  background-color: var(--white-6);
+}
+
 /** Labels */
 .Label {
   color: var(--white-1);
@@ -557,9 +629,20 @@ table.files td.age {
   color: var(--black-3);
 }
 
+.Label--gray-darker {
+  background-color: var(--black-2);
+  color: var(--white-1);
+}
+
 .Label--outline {
   border-color: var(--black-4);
   color: var(--black-3);
+}
+
+/** Use the original colors for yellow labels */
+.Label.bg-yellow-light {
+  color: #586069;
+  border-color: rgba(27,31,35,.15);
 }
 
 /** Markdown */
@@ -575,6 +658,25 @@ table.files td.age {
 .markdown-body blockquote {
   border-color: var(--white-6);
   color: var(--black-2);
+}
+
+.markdown-body table tr {
+  background-color: var(--white-1);
+  border-color: var(--white-6);
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: var(--white-2);
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  border-color: var(--white-6);
+}
+
+.markdown-body code,
+.markdown-body tt {
+  background-color: var(--white-5);
 }
 
 /** Commit bar */
@@ -699,6 +801,11 @@ table.files td.age {
   color: var(--white-7);
 }
 
+.navigation-focus .AvatarStack-body,
+[aria-selected=true] .AvatarStack-body {
+  background-color: var(--white-2);
+}
+
 /** Tab navigation */
 .tabnav {
   border-color: var(--white-4);
@@ -780,6 +887,9 @@ table.files td.age {
   color: var(--black-1);
 }
 
+.review-comment-loader:after,
+.review-comment.is-comment-editing:after,
+.review-comment:after,
 .review-thread-reply {
   background-color: var(--white-2);
 }
@@ -814,8 +924,18 @@ table.files td.age {
   color: var(--black-3);
 }
 
+.timeline-comment-header-text code a {
+  color: var(--black-3);
+}
+
 .timeline-comment.current-user .previewable-comment-form .comment-form-head.tabnav {
   background-color: var(--blue-3);
+  border-color: var(--blue-4);
+}
+
+.timeline-comment.current-user .tabnav-tab.selected,
+.timeline-comment.current-user .tabnav-tab[aria-current],
+.timeline-comment.current-user .tabnav-tab[aria-selected=true] {
   border-color: var(--blue-4);
 }
 
@@ -834,6 +954,10 @@ table.files td.age {
 
 .timeline-comment--caret.current-user:after {
   border-right-color: var(--blue-3);
+}
+
+.timeline-comment.current-user .timeline-comment-label {
+  border-color: var(--blue-5);
 }
 
 /** Timeline pagination */
@@ -889,7 +1013,8 @@ table.files td.age {
   background-color: none;
 }
 
-.status-meta {
+.status-meta,
+.merge-pr-more-commits {
   color: var(--black-3);
 }
 
@@ -995,6 +1120,13 @@ table.files td.age {
   border-color: var(--white-5);
 }
 
+.select-menu-item.selected .description,
+details-menu .select-menu-item[aria-checked=true] .description,
+details-menu .select-menu-item[aria-selected=true] .description,
+.select-menu-item-text .description {
+  color: var(--black-3);
+}
+
 .select-menu-filters {
   background-color: var(--white-2);
 }
@@ -1054,6 +1186,11 @@ details-menu .select-menu-item[aria-selected=true] {
 /** PR files tab */
 .diffbar {
   background-color: var(--white-1);
+}
+
+.diffbar-range-menu .in-range:not(.is-range-selected) {
+  background-color: var(--blue-3);
+  border-bottom-color: var(--blue-4);
 }
 
 .diffstat {
@@ -1206,6 +1343,11 @@ pre,
   color: var(--s-stone);
 }
 
+.pl-smw,
+.pl-v {
+  color: var(--s-chalky);
+}
+
 /** Commit range comparison */
 .range-editor {
   background-color: var(--white-2);
@@ -1268,6 +1410,224 @@ ul.comparison-list > li em {
   background-color: var(--white-3);
 }
 
+.commit-group-title {
+  color: var(--black-3);
+}
+
+/** PR full commit */
+.full-commit {
+  background-color: var(--blue-2);
+  border-color: var(--blue-4);
+}
+
+.full-commit p.commit-title,
+.commit-branches,
+.full-commit .branches-list li.loading,
+.full-commit .branches-list li.pull-request {
+  color: var(--black-2);
+}
+
+.full-commit .branches-list li {
+  color: var(--black-4);
+}
+
+.full-commit .btn-outline,
+.full-commit .btn-outline:disabled {
+  border-color: var(--blue-5);
+}
+
+.full-commit .btn-outline:not(:disabled):hover {
+  color: var(--blue-1);
+  border-color: var(--blue-1);
+}
+
+.full-commit .commit-meta {
+  background-color: var(--white-1);
+  border-color: var(--blue-4);
+}
+
+.full-commit .sha-block {
+  color: var(--black-3);
+}
+
+.full-commit .sha-block > .sha {
+  color: var(--black-4);
+}
+
+.commit-sha {
+  background-color: var(--white-2);
+  border-color: var(--white-5);
+}
+
+/** Checks tab */
+.CheckRun-header {
+  border-top-color: var(--white-5);
+}
+
+/** Actions tab */
+.filter-item {
+  color: var(--black-3);
+}
+
+.filter-item:hover {
+  background-color: var(--white-5);
+}
+
+/** Avatars */
+.AvatarStack-body .avatar {
+  background-color: var(--white-1);
+  border-color: var(--white-1);
+}
+
+/** User dashboard */
+.user-profile-nav {
+  background-color: var(--white-1);
+  border-color: var(--white-4);
+}
+
+.UnderlineNav-item {
+  color: var(--black-3);
+}
+
+.UnderlineNav-item:focus,
+.UnderlineNav-item:hover {
+  border-color: var(--white-4);
+  color: var(--black-1);
+}
+
+.UnderlineNav-item.selected,
+.UnderlineNav-item[aria-current],
+.UnderlineNav-item[role=tab][aria-selected=true] {
+  border-color: #e36209;
+  color: var(--black-1);
+}
+
+/** Menu */
+.menu {
+  background-color: var(--white-1);
+  border-color: var(--white-4);
+}
+
+.menu-heading {
+  background-color: var(--white-2);
+  border-color: var(--white-3);
+  color: var(--black-3);
+}
+
+.menu-item {
+  border-color: var(--white-3);
+}
+
+.menu-item:hover {
+  background-color: var(--white-2);
+}
+
+.menu-item.selected,
+.menu-item[aria-current],
+.menu-item[aria-selected=true] {
+  background-color: var(--white-1);
+  color: var(--black-1);
+}
+
+/** Branch protection rules */
+.listgroup {
+  border-color: var(--white-5);
+}
+
+.listgroup-item {
+  color: var(--black-3);
+}
+
+.listgroup-overflow {
+  background-color: var(--white-2);
+}
+
+.listgroup-header,
+.listgroup-item + .listgroup-item {
+  border-color: var(--white-3);
+}
+
+/** At mentions */
+.suggester {
+  background-color: var(--white-1);
+  border-color: var(--white-3);
+}
+
+.suggester li {
+  border-color: var(--white-3);
+}
+
+.suggester li small {
+  color: var(--black-3);
+}
+
+/** Insights tab */
+.conversation-list-heading .inner {
+  background-color: var(--white-1);
+}
+
+.conversation-list-heading {
+  border-color: var(--white-6);
+  color: var(--black-2);
+}
+
+.summary-stats li,
+.summary-stats li a,
+.diffstat-summary {
+  color: var(--black-3);
+}
+
+.summary-stats li .num,
+.diffstat-summary strong {
+  color: var(--black-1);
+}
+
+.diffstat-summary a {
+  color: var(--black-3);
+}
+
+.simple-conversation-list,
+.simple-conversation-list > li .num {
+  color: var(--black-2);
+}
+
+.summary-stats li {
+  border-color: var(--white-3);
+}
+
+.summary-stats li a:hover {
+  background-color: var(--white-2);
+}
+
+/** Insights graphs */
+.graph-canvas .axis .tick text {
+  fill: var(--black-1)
+}
+
+.graph-canvas .axis line {
+  stroke: var(--white-5);
+}
+
+.tint-box {
+  background-color: var(--white-2);
+}
+
+.boxed-group .heading,
+.boxed-group > h3 {
+  background-color: var(--white-2);
+  border-color: var(--white-4);
+}
+
+.boxed-group-inner {
+  background-color: var(--white-1);
+  border-color: var(--white-4);
+  color: var(--black-3);
+}
+
+.traffic-graph-stats {
+  border-color: var(--white-6);
+}
+
 /** Misc */
 .repohead h1 {
   color: var(--black-3);
@@ -1292,4 +1652,12 @@ ul.comparison-list > li em {
 
 .box-shadow {
   box-shadow: 0 1px 1px #ffffff1a !important
+}
+
+.protip code {
+  background-color: var(--white-2);
+}
+
+.thread-subscription-status {
+  border-color: var(--white-3);
 }
