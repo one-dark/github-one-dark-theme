@@ -161,6 +161,12 @@ a,
   border-color: var(--white-5) !important;
 }
 
+@media (min-width: 1012px) {
+  .border-lg-left {
+    border-color: var(--white-3) !important
+  }
+}
+
 @media (min-width: 768px) {
   .border-md {
     border-color: var(--white-3) !important
@@ -701,6 +707,12 @@ table.files tr.up-tree a:hover {
 
 .cm-s-github-light .CodeMirror-linenumber {
   color: var(--black-2);
+}
+
+.CodeMirror-line::selection,
+.CodeMirror-line > span::selection,
+.CodeMirror-line > span > span::selection {
+  background-color: var(--black-4)
 }
 
 /** File editor syntax highlighting */
@@ -1538,13 +1550,20 @@ ul.comparison-list > li em {
   border-top-color: var(--white-5);
 }
 
-/** Actions tab */
+/** Filters */
 .filter-item {
   color: var(--black-3);
 }
 
 .filter-item:hover {
   background-color: var(--white-5);
+}
+
+.filter-item.selected,
+.filter-item[aria-current],
+.filter-item[aria-selected=true] {
+  color: #fff;
+  background-color: #0366d6;
 }
 
 /** Avatars */
@@ -1722,6 +1741,105 @@ ul.comparison-list > li em {
 
 .tree-browser-result mark {
   color: var(--blue-1);
+}
+
+/** Commit form */
+.commit-form:before {
+  border-right-color: var(--white-3);
+}
+
+.commit-form:after {
+  border-right-color: var(--white-1);
+}
+
+/** Global search */
+.jump-to-suggestions-results-container .navigation-item {
+  border-color: var(--white-3);
+}
+
+.jump-to-suggestions-path {
+  color: var(--black-1);
+}
+
+.jump-to-suggestions-path mark {
+  color: var(--blue-1);
+}
+
+.jump-to-field-active {
+  color: var(--black-1) !important;
+}
+
+/** Search results */
+.code-list .divider .blob-code,
+.code-list .divider .blob-num {
+  background-color: var(--s-context)
+}
+
+.code-list .file-box {
+  background-color: var(--s-background);
+  border-color: var(--white-3);
+}
+
+.code-list .code-list-item + .code-list-item {
+  border-color: var(--white-3);
+}
+
+.bg-yellow-light {
+  background-color: var(--blue-1) !important;
+  color: var(--white-1);
+}
+
+/** Discussion tab */
+.icon-discussion-gray,
+.icon-discussion-gray path {
+  fill: var(--black-1);
+}
+
+.discussion-comment .reaction-summary-item:not(.add-reaction-btn) {
+  border-color: var(--white-4);
+}
+
+.btn-discussions {
+  color: var(--black-3);
+}
+
+.btn-discussions:focus,
+.btn-discussions:hover {
+  background-color: transparent;
+}
+
+.btn-invisible.selected,
+.btn-invisible.zeroclipboard-is-active,
+.btn-invisible.zeroclipboard-is-hover,
+.btn-invisible:active,
+.btn-invisible:focus,
+.btn-invisible:hover,
+.btn-invisible[aria-selected=true] {
+  color: var(--blue-1);
+}
+
+/** Accepted discussion */
+.timeline-comment.current-user.timeline-chosen-answer .timeline-comment-header,
+.timeline-comment.timeline-chosen-answer .timeline-comment-header {
+  background-color: #24442c;
+  border-color: #328449;
+}
+
+.timeline-comment.current-user.timeline-chosen-answer,
+.timeline-comment.current-user.timeline-chosen-answer .timeline-comment-label,
+.timeline-comment.timeline-chosen-answer,
+.timeline-comment.timeline-chosen-answer .timeline-comment-label {
+  border-color: #328449;
+}
+
+.timeline-comment.current-user.timeline-chosen-answer:before,
+.timeline-comment.timeline-chosen-answer:before {
+  border-right-color: #328449;
+}
+
+.timeline-comment.current-user.timeline-chosen-answer:after,
+.timeline-comment.timeline-chosen-answer:after {
+  border-right-color: #24442c;
 }
 
 /** Misc */
