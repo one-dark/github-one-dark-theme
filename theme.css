@@ -679,6 +679,74 @@ table.files tr.up-tree a:hover {
   background-color: var(--white-5);
 }
 
+/** File editor */
+.cm-s-github-light.CodeMirror {
+  background-color: var(--s-background);
+  color: var(--s-ivory);
+}
+
+.cm-s-github-light .CodeMirror-lines {
+  background-color: var(--s-background);
+}
+
+.cm-s-github-light .CodeMirror-gutters,
+.cm-s-github-light .CodeMirror-linenumber {
+  background-color: var(--s-background);
+}
+
+.cm-s-github-light .CodeMirror-gutters,
+.cm-s-github-light .CodeMirror-lines {
+  border-top: 1px solid var(--white-3);
+}
+
+.cm-s-github-light .CodeMirror-linenumber {
+  color: var(--black-2);
+}
+
+/** File editor syntax highlighting */
+.cm-s-github-light .cm-string,
+.cm-string-2 {
+  color: var(--s-sage);
+}
+
+.cm-s-github-light .cm-variable,
+.cm-variable-2 {
+  color: var(--s-ivory);
+}
+
+.cm-property {
+  color: var(--s-coral);
+}
+
+.cm-operator,
+.cm-atom {
+  color: var(--s-cyan);
+}
+
+.cm-qualifier,
+.cm-attribute,
+.cm-number {
+  color: var(--s-whiskey);
+}
+
+.cm-s-github-light .cm-keyword {
+  color: var(--s-violet);
+}
+
+.cm-tag:not(.cm-bracket) {
+  color: var(--s-coral);
+}
+
+/** File editor search */
+.CodeMirror-dialog-top {
+  background-color: var(--white-1);
+  border-color: var(--white-3);
+}
+
+.CodeMirror-search-hint {
+  color: var(--black-3);
+}
+
 /** Commit bar */
 .commit-tease {
   color: var(--black-3);
@@ -1309,11 +1377,18 @@ tr:not(.blob-expanded) + .blob-expanded .blob-num {
   background-color: var(--s-background);
 }
 
+.pl-c1 {
+  color: var(--s-coral);
+}
+
 pre,
 .pl-s .pl-s1,
-.pl-smi,
 .pl-mb {
   color: var(--s-ivory);
+}
+
+.pl-smi {
+  color: var(--s-chalky);
 }
 
 .pl-pds,
@@ -1326,13 +1401,12 @@ pre,
   color: var(--s-sage);
 }
 
-.pl-c1,
 .pl-s .pl-v {
   color: var(--s-whiskey);
 }
 
 .pl-en {
-  color: var(--s-cyan);
+  color: var(--s-malibu);
 }
 
 .pl-k {
@@ -1626,6 +1700,28 @@ ul.comparison-list > li em {
 
 .traffic-graph-stats {
   border-color: var(--white-6);
+}
+
+/** File finder */
+.tree-browser-result[aria-selected=true] {
+  background-color: var(--white-1) !important;
+}
+
+.tree-browser-result[aria-selected=true] .octicon-chevron-right {
+  color: var(--blue-j);
+}
+
+.tree-browser-result {
+  color: var(--black-2);
+}
+
+.tree-browser-result:hover {
+  color: var(--black-1);
+  text-decoration: none;
+}
+
+.tree-browser-result mark {
+  color: var(--blue-1);
 }
 
 /** Misc */
