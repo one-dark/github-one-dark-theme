@@ -1,23 +1,24 @@
 :root {
-  --white-1: #fff;
-  --white-2: #f6f8fa;
-  --white-3: #e1e4e8;
-  --white-4: #d1d5da;
-  --white-5: #eaecef;
-  --white-6: #dfe2e5;
-  --white-7: #ccc;
-  --black-1: #24292e;
-  --black-2: #6a737d;
-  --black-3: #586069;
-  --black-4: #444d56;
-  --blue-1: #0366d6;
-  --blue-2: #eaf5ff;
-  --blue-3: #f1f8ff;
-  --blue-4: #def;
-  --blue-5: #c0d3ea;
-  
-  --box-shadow: #9b9b9b26;
-  
+  --white-1: #1e2022;
+  --white-2: #303234;
+  --white-3: #454647;
+  --white-4: #616161;
+  --white-5: #3a3c3d;
+  --white-6: #524f4f;
+  --white-7: #767676;
+  --black-1: #dfdfdf;
+  --black-2: #b2b6bb;
+  --black-3: #d1d5da;
+  --black-3: #b5bac1;
+  --black-4: #969a9f;
+  --blue-1: #559cf8;
+  --blue-2: #27364a;
+  --blue-3: #263242;
+  --blue-4: #34465f;
+  --blue-5: #405675;
+
+  --box-shadow: #5d5d5d26;
+
   /* Syntax highlighting */
   --s-background: #282c34;
   --s-context: #2c313a;
@@ -32,28 +33,6 @@
   --s-stone: #5c6370;
   --s-violet: #c678dd;
   --s-whiskey: #d19a66;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --white-1: #1e2022;
-    --white-2: #303234;
-    --white-3: #454647;
-    --white-4: #616161;
-    --white-5: #3a3c3d;
-    --white-6: #524f4f;
-    --white-7: #767676;
-    --black-1: #dfdfdf;
-    --black-2: #b2b6bb;
-    --black-3: #d1d5da;
-    --black-3: #b5bac1;
-    --black-4: #969a9f;
-    --blue-1: #559cf8;
-    --blue-2: #27364a;
-    --blue-3: #263242;
-    --blue-4: #34465f;
-    --blue-5: #405675;
-  }
 }
 
 body {
@@ -168,13 +147,13 @@ a,
 }
 
 @media (min-width: 768px) {
-  .border-md {
-    border-color: var(--white-3) !important
+  .border-md,
+  .border-md-top {
+    border-color: var(--white-3) !important;
   }
 }
 
 /** Buttons */
-/** TODO */
 .btn:not(.btn-primary) {
   border-color: var(--white-6);
 }
@@ -268,6 +247,27 @@ a,
   border-color: var(--white-3);
 }
 
+.repohead h1 {
+  color: var(--black-3);
+}
+
+.Header-link {
+  color: #fff;
+}
+
+.Counter {
+  background-color: #fff2;
+  color: var(--black-3);
+}
+
+.breadcrumb strong.final-path {
+  color: var(--black-1);
+}
+
+.pagehead-actions > li {
+  color: var(--black-1);
+}
+
 /** Boxes */
 .Box {
   background-color: var(--white-1);
@@ -277,6 +277,11 @@ a,
 .Box-header {
   background-color: var(--white-2);
   border-color: var(--white-4);
+}
+
+.Box-header--blue {
+  background-color: var(--blue-3);
+  border-color: var(--blue-4);
 }
 
 .Box-row {
@@ -306,6 +311,11 @@ a,
 }
 
 /** Tables */
+.table-list-header {
+  background-color: var(--white-2);
+  border-color: var(--white-3);
+}
+
 .table-list-header-toggle .btn-link:hover,
 .table-list-header-toggle .btn-link.selected,
 .table-list-header-toggle .btn-link.selected:hover {
@@ -314,6 +324,11 @@ a,
 
 .table-list-header-toggle .btn-link {
   color: var(--black-3);
+}
+
+.table-list {
+  border-color: var(--white-3);
+  color: var(--black-2);
 }
 
 /** Dashboard activity */
@@ -411,7 +426,7 @@ a,
   .SelectMenu-tab:not([aria-checked=true]):hover {
     background-color: var(--white-1);
   }
-  
+
   .SelectMenu-tab:not([aria-selected=true]):hover {
     background-color: var(--white-3);
     color: var(--black-1);
@@ -559,6 +574,12 @@ a.branch-name {
   background-color: var(--white-2);
 }
 
+.subnav-item.selected,
+.subnav-item[aria-current],
+.subnav-item[aria-selected=true] {
+  background-color: #0366d6;
+}
+
 /** Repo summary */
 .overall-summary {
   border-color: var(--white-6);
@@ -588,6 +609,11 @@ a.branch-name {
 .repository-lang-stats ol.repository-lang-stats-numbers li > a,
 .repository-lang-stats ol.repository-lang-stats-numbers li > span {
   color: var(--black-2);
+}
+
+
+.repository-lang-stats-graph .language-color:not(:first-child) {
+  border-color: var(--white-1);
 }
 
 /** File table */
@@ -683,6 +709,19 @@ table.files tr.up-tree a:hover {
 .markdown-body code,
 .markdown-body tt {
   background-color: var(--white-5);
+}
+
+.markdown-body hr {
+  background-color: var(--white-3);
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: var(--black-2);
 }
 
 /** File editor */
@@ -812,15 +851,23 @@ table.files tr.up-tree a:hover {
   border-top-color: var(--black-1);
 }
 
-/** */
+/** Commit refs */
 .commit-ref {
   background-color: var(--blue-2);
+  color: var(--blue-1);
+}
+
+.commit-ref .user {
   color: var(--blue-1);
 }
 
 /** Progress bar */
 .progress-bar {
   background-color: var(--white-5);
+}
+
+.progress-bar-inline .progress-bar {
+  border-color: var(--white-3);
 }
 
 .task-progress .progress-bar {
@@ -916,6 +963,22 @@ table.files tr.up-tree a:hover {
 .tabnav-tab:focus,
 .tabnav-tab:hover {
   color: var(--black-1);
+}
+
+@media (max-width: 767px) {
+  .tabnav--responsive .tabnav-tab {
+    background-color: var(--white-2);
+    border-color: var(--white-3);
+  }
+  
+  .tabnav--responsive .tabnav-tab:first-child {
+    border-color: var(--white-3);
+  }
+
+  .tabnav--responsive .tabnav-tab.selected,
+  .tabnav--responsive .tabnav-tab[aria-selected=true] {
+    background-color: var(--white-1);
+  }
 }
 
 /** Pull request timeline */
@@ -1055,7 +1118,7 @@ table.files tr.up-tree a:hover {
 
 .branch-action-state-closed-dirty .branch-action-body,
 .branch-action-state-dirty .branch-action-body,
-.is-rebasing .branch-action-state-dirty-if-rebasing .branch-action-body { 
+.is-rebasing .branch-action-state-dirty-if-rebasing .branch-action-body {
   border-color: var(--white-4);
 }
 
@@ -1133,6 +1196,10 @@ table.files tr.up-tree a:hover {
 
 .dropdown-header {
   color: var(--black-3);
+}
+
+.dropdown-item {
+  color: var(--black-1);
 }
 
 .dropdown-divider {
@@ -1256,6 +1323,12 @@ details-menu .select-menu-item[aria-selected=true] {
 @media (min-width: 768px) {
   .page-responsive .previewable-comment-form .comment-form-head.tabnav {
     background-color: var(--white-2);
+  }
+}
+
+@media (min-width: 1012px) {
+  .page-responsive .previewable-comment-form .comment-form-head.tabnav .toolbar-commenting {
+    background-color: transparent !important;
   }
 }
 
@@ -1395,7 +1468,8 @@ tr:not(.blob-expanded) + .blob-expanded .blob-num {
 
 pre,
 .pl-s .pl-s1,
-.pl-mb {
+.pl-mb,
+.pl-mi {
   color: var(--s-ivory);
 }
 
@@ -1429,6 +1503,7 @@ pre,
   color: var(--s-stone);
 }
 
+.pl-ent,
 .pl-smw,
 .pl-v {
   color: var(--s-chalky);
@@ -1576,6 +1651,10 @@ ul.comparison-list > li em {
 .user-profile-nav {
   background-color: var(--white-1);
   border-color: var(--white-4);
+}
+
+.UnderlineNav {
+  border-color: var(--white-3);
 }
 
 .UnderlineNav-item {
@@ -1842,28 +1921,154 @@ ul.comparison-list > li em {
   border-right-color: #24442c;
 }
 
+/** Responsive comment form */
+.page-responsive .previewable-comment-form .comment-form-head.tabnav .toolbar-commenting {
+  background-color: var(--white-1);
+}
+
+/** Actions tab */
+.file-commit-form--full {
+  background-color: var(--white-1);
+}
+
+/** Reactions */
+.comment-reactions .user-has-reacted {
+  background-color: var(--blue-3);
+}
+
+.comment-reactions.has-reactions,
+.reaction-summary-item {
+  border-color: var(--white-3);
+}
+
+.reaction-sort-item:focus,
+.reaction-sort-item:hover {
+  background-color: var(--blue-1);
+}
+
+.reaction-sort-item[aria-checked=true] {
+  background-color: var(--blue-3);
+  border-color: var(--blue-1);
+}
+
+/** Merge branch */
+.merge-branch-heading {
+  color: var(--black-1);
+}
+
+.merge-branch-description {
+  color: var(--black-3);
+}
+
+.branch-action-state-merged .branch-action-body {
+  border-color: var(--white-4);
+}
+
+.branch-action-state-merged .branch-action-body:before {
+  border-right-color: var(--white-4);
+}
+
+/** New PR */
+.new-discussion-timeline .composer .timeline-comment:after {
+  border-right-color: var(--white-1);
+}
+
+.new-discussion-timeline .composer .comment-form-head.tabnav {
+  background-color: var(--white-1);
+}
+
+/** Milestones */
+.milestone-title-link a {
+  color: var(--black-1);
+}
+
+.table-list-milestones .stat {
+  color: var(--black-2);
+}
+
+.table-list-milestones .stat-label {
+  color: var(--black-3);
+}
+
+/** Organization header */
+.orghead {
+  background-color: var(--white-2);
+  border-color: var(--white-5);
+  color: var(--black-2)
+}
+
+.pagehead-tabs-item.selected {
+  background-color: var(--white-1);
+  border-color: #e36209 var(--white-3) transparent;
+  color: var(--black-1);
+}
+
+.pagehead-tabs-item .Counter {
+  color: var(--black-4);
+}
+
+.pagehead-tabs-item {
+  color: var(--black-3);
+}
+
+.pagehead-tabs-item:hover {
+  color: var(--black-1);
+}
+
+.pagehead-tabs-item .octicon {
+  color: var(--black-4);
+}
+
+/** Signed commits */
+.dropdown-signed-commit .dropdown-menu:after {
+  border-bottom-color: var(--white-2);
+}
+
+.dropdown-menu:before {
+  border-bottom-color: var(--white-3);
+}
+
+.signed-commit-header {
+  background-color: var(--white-2);
+  border-color: var(--white-3);
+}
+
+/** Releases tab */
+.release-entry {
+  border-color: var(--white-3);
+}
+
+.release-timeline-tags .tag-timeline-date:after {
+  background-color: var(--white-3);
+  border-color: var(--white-1);
+}
+
+@media (min-width: 768px) {
+  .release-main-section {
+    border-color: var(--white-3);
+  }
+}
+
+/** Branch info bar */
+.branch-infobar {
+  background-color: var(--white-2);
+  border-color: var(--white-6);
+  color: var(--black-3);
+}
+
+/** Add actions runner dialog */
+.blankslate code {
+  background-color: var(--white-1);
+  border-color: var(--white-5);
+}
+
+.CopyBlock:active,
+.CopyBlock:focus,
+.CopyBlock:hover {
+  background-color: var(--white-1);
+}
+
 /** Misc */
-.repohead h1 {
-  color: var(--black-3);
-}
-
-.Header-link {
-  color: #fff;
-}
-
-.Counter {
-  background-color: #fff2;
-  color: var(--black-3);
-}
-
-.breadcrumb strong.final-path {
-  color: var(--black-1);
-}
-
-.pagehead-actions > li {
-  color: var(--black-1);
-}
-
 .box-shadow {
   box-shadow: 0 1px 1px #ffffff1a !important
 }
@@ -1874,4 +2079,22 @@ ul.comparison-list > li em {
 
 .thread-subscription-status {
   border-color: var(--white-3);
+}
+
+.copyable-terminal {
+  background-color: var(--white-2);
+}
+
+.commit-message .issue-link {
+  color: var(--black-1);
+}
+
+.js-diff-placeholder {
+  fill: var(--white-5);
+}
+
+.boxed-group .heading a.boxed-group-breadcrumb,
+.boxed-group > h3 a.boxed-group-breadcrumb,
+.Subhead-description {
+  color: var(--black-3);
 }
