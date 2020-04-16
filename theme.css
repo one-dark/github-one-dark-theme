@@ -1,3 +1,21 @@
+/** Original colors
+  white-1 - fff
+  white-2 - f6f8fa
+  white-3 - e1e4e8
+  white-4 - d1d5da
+  white-5 - eaecef
+  white-6 - dfe2e5
+  white-7 - ccc
+  black-1 - 24292e
+  black-2 - 6a737d
+  black-3 - 586069
+  black-4 - 444d56
+  blue-1 - 0366d6
+  blue-2 - eaf5ff
+  blue-3 - f1f8ff
+  blue-4 - def
+*/
+
 :root {
   --white-1: #1e2022;
   --white-2: #303234;
@@ -282,6 +300,10 @@ a,
 .Box-header--blue {
   background-color: var(--blue-3);
   border-color: var(--blue-4);
+}
+
+.Box-row--blue {
+  background-color: var(--blue-3);
 }
 
 .Box-row {
@@ -672,8 +694,10 @@ table.files tr.up-tree a:hover {
 }
 
 /** Use the original colors for yellow labels */
+.Label--outline.bg-yellow-light,
 .Label.bg-yellow-light {
   color: #586069;
+  background-color: #FFF5A9 !important;
   border-color: rgba(27,31,35,.15);
 }
 
@@ -849,6 +873,10 @@ table.files tr.up-tree a:hover {
 .tooltipped-ne:before,
 .tooltipped-nw:before {
   border-top-color: var(--black-1);
+}
+
+.tooltipped-w:before {
+  border-left-color: var(--black-1);
 }
 
 /** Commit refs */
@@ -1028,6 +1056,11 @@ table.files tr.up-tree a:hover {
 
 .review-comment {
   color: var(--black-1);
+}
+
+.review-comment .is-comment-editing {
+  background-color: var(--white-1);
+  border-color: var(--white-3);
 }
 
 .review-comment-loader:after,
@@ -2068,6 +2101,28 @@ ul.comparison-list > li em {
   background-color: var(--white-1);
 }
 
+/** PR pending review comments */
+.review-summary-form-wrapper {
+  background-color: var(--white-1);
+}
+
+.is-pending .file-header {
+  background-color: #f3e8a1;
+}
+
+.is-pending .comment-form-head.tabnav,
+.is-pending .file, .is-pending .tabnav-tab.selected {
+  border-color: var(--white-4);
+}
+
+.is-pending .timeline-comment--caret:after {
+  border-right-color: var(--white-2);
+}
+
+.is-pending .file-header a {
+  color: #444d56 !important;
+}
+
 /** Misc */
 .box-shadow {
   box-shadow: 0 1px 1px #ffffff1a !important
@@ -2097,4 +2152,8 @@ ul.comparison-list > li em {
 .boxed-group > h3 a.boxed-group-breadcrumb,
 .Subhead-description {
   color: var(--black-3);
+}
+
+.flash-warn .link-gray-dark {
+  color: #24292e !important;
 }
