@@ -1,21 +1,20 @@
 /** Original colors
-  white-1 - fff
-  white-2 - f6f8fa
-  white-3 - e1e4e8
-  white-4 - d1d5da
-  white-5 - eaecef
-  white-6 - dfe2e5
-  white-7 - ccc
-  black-1 - 24292e
-  black-2 - 6a737d
-  black-3 - 586069
-  black-4 - 444d56
-  blue-1 - 0366d6
-  blue-2 - eaf5ff
-  blue-3 - f1f8ff
-  blue-4 - def
+white-1 - fff
+white-2 - f6f8fa
+white-3 - e1e4e8
+white-4 - d1d5da
+white-5 - eaecef
+white-6 - dfe2e5
+white-7 - ccc
+black-1 - 24292e
+black-2 - 6a737d
+black-3 - 586069
+black-4 - 444d56
+blue-1 - 0366d6
+blue-2 - eaf5ff
+blue-3 - f1f8ff
+blue-4 - def
 */
-
 :root {
   --white-1: #1e2022;
   --white-2: #303234;
@@ -58,7 +57,8 @@ body {
   color: var(--black-1);
 }
 
-.rule, hr {
+.rule,
+hr {
   border-color: var(--white-6);
 }
 
@@ -151,7 +151,7 @@ a,
 .border-right,
 .border-top,
 .border-left {
-   border-color: var(--white-3) !important;
+  border-color: var(--white-3) !important;
 }
 
 .border-gray-dark {
@@ -702,7 +702,7 @@ table.files tr.up-tree a:hover {
 .Label.bg-yellow-light {
   color: #586069;
   background-color: #FFF5A9 !important;
-  border-color: rgba(27,31,35,.15);
+  border-color: rgba(27, 31, 35, .15);
 }
 
 /** Markdown */
@@ -1002,7 +1002,7 @@ table.files tr.up-tree a:hover {
     background-color: var(--white-2);
     border-color: var(--white-3);
   }
-  
+
   .tabnav--responsive .tabnav-tab:first-child {
     border-color: var(--white-3);
   }
@@ -1146,7 +1146,6 @@ table.files tr.up-tree a:hover {
 }
 
 /* TODO: Fix background image */
-
 /* PR branch actions */
 .branch-action-body {
   background-color: var(--white-1);
@@ -1224,6 +1223,7 @@ table.files tr.up-tree a:hover {
 /** Dropdown menu */
 .dropdown-menu {
   background-color: var(--white-1);
+  border-color: var(--white-3);
   box-shadow: 0 1px 15px var(--box-shadow);
 }
 
@@ -1295,7 +1295,8 @@ table.files tr.up-tree a:hover {
 /** Select menu */
 .select-menu-modal {
   background-color: var(--white-1);
-  box-shadow: 0 3px 12px var(--box-shadow);
+  border-color: var(--white-3);
+  box-shadow: 0 3px 3px var(--box-shadow);
   color: var(--black-3);
 }
 
@@ -1340,7 +1341,8 @@ details-menu .select-menu-item[aria-selected=true] {
 
 .select-menu-tabs .select-menu-tab-nav.selected,
 .select-menu-tabs .select-menu-tab-nav[aria-selected=true],
-.select-menu-tabs a.selected, .select-menu-tabs a[aria-selected=true] {
+.select-menu-tabs a.selected,
+.select-menu-tabs a[aria-selected=true] {
   background-color: var(--white-1);
   border-color: var(--white-6) var(--white-6) var(--white-1);
   color: var(--black-1);
@@ -1483,6 +1485,19 @@ tr:not(.blob-expanded) + .blob-expanded .blob-num {
 }
 
 /** PR files comments */
+.diff-table tr:not(:last-child) .line-comments {
+  background-color: var(--white-1);
+}
+
+.empty-cell + .line-comments,
+.line-comments + .line-comments {
+  border-left-color: var(--white-5);
+}
+
+.diff-table .line-comments {
+  border-top-color: var(--white-3);
+}
+
 .diff-table tr:not(:last-child) .line-comments,
 .review-thread-reply {
   border-color: var(--white-3);
@@ -1864,6 +1879,7 @@ ul.comparison-list > li em {
 }
 
 /** Commit form */
+.merge-branch-form .commit-form:before,
 .commit-form:before {
   border-right-color: var(--white-3);
 }
@@ -1984,6 +2000,10 @@ ul.comparison-list > li em {
 .comment-reactions.has-reactions,
 .reaction-summary-item {
   border-color: var(--white-3);
+}
+
+.review-comment .reaction-summary-item:not(.add-reaction-btn) {
+  border-color: var(--white-4);
 }
 
 .reaction-sort-item:focus,
@@ -2123,7 +2143,8 @@ ul.comparison-list > li em {
 }
 
 .is-pending .comment-form-head.tabnav,
-.is-pending .file, .is-pending .tabnav-tab.selected {
+.is-pending .file,
+.is-pending .tabnav-tab.selected {
   border-color: var(--white-4);
 }
 
@@ -2164,7 +2185,7 @@ ul.comparison-list > li em {
 }
 
 .js-notifications-back-to-inbox {
-  border-color: var(--blue-1) !important;
+  border-color: var(--white-1) !important;
 }
 
 .js-notifications-back-to-inbox:hover {
@@ -2221,6 +2242,20 @@ ul.comparison-list > li em {
   color: var(--black-1);
 }
 
+/** OAuth page */
+.oauth-permissions-details .permission-title {
+  color: var(--black-1);
+}
+
+.oauth-permissions-details .permission-summary .access-details {
+  color: var(--black-3);
+}
+
+.oauth-permissions-details .permission-summary em.highlight {
+  background-color: var(--blue-4);
+  color: var(--black-3);
+}
+
 /** Misc */
 .box-shadow {
   box-shadow: 0 1px 1px #ffffff1a !important
@@ -2250,4 +2285,8 @@ ul.comparison-list > li em {
 .boxed-group > h3 a.boxed-group-breadcrumb,
 .Subhead-description {
   color: var(--black-3);
+}
+
+.header-nav-current-user .user-profile-link {
+  color: var(--black-1);
 }
