@@ -1,21 +1,22 @@
 /** Original colors
-white-1 - fff
-white-2 - f6f8fa
-white-3 - e1e4e8
-white-4 - d1d5da
-white-5 - eaecef
-white-6 - dfe2e5
-white-7 - ccc
-black-1 - 24292e
-black-2 - 6a737d
-black-3 - 586069
-black-4 - 444d56
-blue-1 - 0366d6
-blue-2 - eaf5ff
-blue-3 - f1f8ff
-blue-4 - def
+  white-1 - fff
+  white-2 - f6f8fa
+  white-3 - e1e4e8
+  white-4 - d1d5da
+  white-5 - eaecef
+  white-6 - dfe2e5
+  white-7 - ccc
+  black-1 - 24292e
+  black-2 - 6a737d
+  black-3 - 586069
+  black-4 - 444d56
+  blue-1 - 0366d6
+  blue-2 - eaf5ff
+  blue-3 - f1f8ff
+  blue-4 - def
 */
-:root {
+
+}:root {
   --white-1: #1e2022;
   --white-2: #303234;
   --white-3: #454647;
