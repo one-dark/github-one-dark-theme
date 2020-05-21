@@ -1698,6 +1698,7 @@ ul.comparison-list > li em {
 .user-profile-sticky-bar:after {
   background-color: var(--white-1);
   border-bottom: 1px solid var(--white-3);
+  height: 54px;
 }
 
 .UnderlineNav {
