@@ -1,11 +1,11 @@
 /* ==UserStyle==
 @name           GitHub One Dark Theme
-@namespace      github.com/openstyles/stylus
-@version        1.0.2
+@namespace      github.com/mskelton
+@version        1.1.0
 @description    Relieve the stress on your eyes when using GitHub with this custom dark theme! This uses a nice gray color rather than pure black to prevent overly contrasting colors.
 @author         Mark Skelton
 @license        MIT
-@homepageURL    https://gist.github.com/mskelton/596b864757a5b0b4bb0450272e86e686
+@homepageURL    https://github.com/mskelton/github-one-dark-theme
 ==/UserStyle== */
 @-moz-document regexp("^https://github.com/.*"),
 domain("gist.github.com") {
