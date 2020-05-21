@@ -1,4 +1,6 @@
 # GitHub One Dark Theme
+
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://github.com/mskelton/github-one-dark-theme/blob/master/theme.user.css)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
