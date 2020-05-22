@@ -1427,6 +1427,11 @@ the consistent color palette. */
     color: var(--s-ivory);
   }
 
+  .blob-code-inner.highlighted,
+  .blob-code-inner .highlighted {
+    background-color: var(--blue-3);
+  }
+
   .blob-num:hover {
     color: var(--black-1);
   }
