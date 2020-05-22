@@ -1829,7 +1829,7 @@ ul.comparison-list > li em {
 }
 
 .graph-canvas .axis line {
-  stroke: var(--white-5);
+  stroke: var(--white-3);
 }
 
 .tint-box {
