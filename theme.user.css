@@ -1530,6 +1530,19 @@ the consistent color palette. */
     border-color: var(--white-6);
   }
 
+  /** Rich diff */
+  .rich-diff .markdown-body {
+    background-color: var(--white-1);
+  }
+
+  .prose-diff.collapsed .rich-diff-level-zero.expandable .octicon {
+    color: var(--white-4);
+  }
+
+  .prose-diff.collapsed .rich-diff-level-zero.expandable:hover .octicon {
+    color: var(--black-1);
+  }
+
   /** Syntax highlighting */
   .js-file-content,
   .markdown-body .highlight pre,
@@ -2310,6 +2323,23 @@ the consistent color palette. */
 
   .avatar-before-user-status {
     border-color: var(--white-3);
+  }
+
+  /** Existing PR panel */
+  .list-group-item {
+    border-color: var(--white-3);
+  }
+
+  .list-group-item-link {
+    color: var(--black-1);
+  }
+
+  .existing-pull .existing-pull-number {
+    color: var(--black-3);
+  }
+
+  .list-group-item .list-group-item-summary a.quiet {
+    color: var(--black-2);
   }
 
   /** Misc */
