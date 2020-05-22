@@ -1679,6 +1679,11 @@ ul.comparison-list > li em {
 }
 
 /** Filters */
+.filter-bar {
+  background-color: var(--white-1);
+  border-color: var(--white-1);
+}
+
 .filter-item {
   color: var(--black-3);
 }
@@ -1704,6 +1709,12 @@ ul.comparison-list > li em {
 .user-profile-nav {
   background-color: var(--white-1);
   border-color: var(--white-4);
+}
+
+.user-profile-sticky-bar:after {
+  background-color: var(--white-1);
+  border-color: var(--white-3);
+  height: 54px;
 }
 
 .UnderlineNav {
@@ -1830,11 +1841,11 @@ ul.comparison-list > li em {
 
 /** Insights graphs */
 .graph-canvas .axis .tick text {
-  fill: var(--black-1)
+  fill: var(--black-1);
 }
 
 .graph-canvas .axis line {
-  stroke: var(--white-5);
+  stroke: var(--white-3);
 }
 
 .tint-box {
@@ -1855,6 +1866,10 @@ ul.comparison-list > li em {
 
 .traffic-graph-stats {
   border-color: var(--white-6);
+}
+
+.capped-card-content {
+  background-color: var(--white-2);
 }
 
 /** File finder */
