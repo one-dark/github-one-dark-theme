@@ -1,0 +1,14 @@
+name: Format
+on:
+  pull_request:
+    branches: [master]
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: creyD/prettier_action@v2.2
+        with:
+          commit_message: Apply formatting changes
