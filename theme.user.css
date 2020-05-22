@@ -10,23 +10,22 @@
 @-moz-document regexp("^https://github.com/.*"),
 domain("gist.github.com") {
   /** Original colors
-    white-1 - fff
-    white-2 - f6f8fa
-    white-3 - e1e4e8
-    white-4 - d1d5da
-    white-5 - eaecef
-    white-6 - dfe2e5
-    white-7 - ccc
-    black-1 - 24292e
-    black-2 - 6a737d
-    black-3 - 586069
-    black-4 - 444d56
-    blue-1 - 0366d6
-    blue-2 - eaf5ff
-    blue-3 - f1f8ff
-    blue-4 - def
-  */
-
+  white-1 - fff
+  white-2 - f6f8fa
+  white-3 - e1e4e8
+  white-4 - d1d5da
+  white-5 - eaecef
+  white-6 - dfe2e5
+  white-7 - ccc
+  black-1 - 24292e
+  black-2 - 6a737d
+  black-3 - 586069
+  black-4 - 444d56
+  blue-1 - 0366d6
+  blue-2 - eaf5ff
+  blue-3 - f1f8ff
+  blue-4 - def
+*/
   :root {
     --white-1: #1e2022;
     --white-2: #303234;
@@ -176,7 +175,7 @@ domain("gist.github.com") {
 
   @media (min-width: 1012px) {
     .border-lg-left {
-      border-color: var(--white-3) !important;
+      border-color: var(--white-3) !important
     }
   }
 
@@ -212,7 +211,7 @@ domain("gist.github.com") {
 
   .btn-outline.disabled,
   .btn-outline:disabled,
-  .btn-outline[aria-disabled="true"] {
+  .btn-outline[aria-disabled=true] {
     background-color: var(--white-1);
     border-color: var(--white-3) !important;
     color: var(--black-4);
@@ -221,7 +220,7 @@ domain("gist.github.com") {
   .btn-outline.selected,
   .btn-outline:active,
   .btn-outline:hover,
-  .btn-outline[aria-selected="true"],
+  .btn-outline[aria-selected=true],
   [open] > .btn-outline {
     border-color: #0366d6;
   }
@@ -418,7 +417,7 @@ domain("gist.github.com") {
     color: var(--black-3);
   }
 
-  .SelectMenu-item[aria-checked="true"] {
+  .SelectMenu-item[aria-checked=true] {
     color: var(--black-1);
   }
 
@@ -448,24 +447,24 @@ domain("gist.github.com") {
     color: var(--black-2);
   }
 
-  .SelectMenu-tab[aria-selected="true"] {
+  .SelectMenu-tab[aria-selected=true] {
     background-color: var(--white-1);
     color: var(--black-1);
   }
 
   @media (min-width: 544px) {
-    .SelectMenu-tab[aria-selected="true"] {
+    .SelectMenu-tab[aria-selected=true] {
       border-color: var(--white-3);
     }
   }
 
   @media (hover: hover) {
-    .SelectMenu-tab:not([aria-checked="true"]):active,
-    .SelectMenu-tab:not([aria-checked="true"]):hover {
+    .SelectMenu-tab:not([aria-checked=true]):active,
+    .SelectMenu-tab:not([aria-checked=true]):hover {
       background-color: var(--white-1);
     }
 
-    .SelectMenu-tab:not([aria-selected="true"]):hover {
+    .SelectMenu-tab:not([aria-selected=true]):hover {
       background-color: var(--white-3);
       color: var(--black-1);
     }
@@ -614,7 +613,7 @@ the consistent color palette. */
 
   .subnav-item.selected,
   .subnav-item[aria-current],
-  .subnav-item[aria-selected="true"] {
+  .subnav-item[aria-selected=true] {
     background-color: #0366d6;
   }
 
@@ -649,13 +648,9 @@ the consistent color palette. */
     color: var(--black-2);
   }
 
+
   .repository-lang-stats-graph .language-color:not(:first-child) {
     border-color: var(--white-1);
-  }
-
-  /** Clone button */
-  .file-navigation .get-repo-btn:first-child {
-    border-color: var(--white-3);
   }
 
   /** File table */
@@ -668,7 +663,7 @@ the consistent color palette. */
   }
 
   table.files tr.navigation-focus td,
-  table.files tr[aria-selected="true"] td {
+  table.files tr[aria-selected=true] td {
     background-color: var(--white-2);
   }
 
@@ -717,8 +712,8 @@ the consistent color palette. */
   .Label--outline.bg-yellow-light,
   .Label.bg-yellow-light {
     color: #586069;
-    background-color: #fff5a9 !important;
-    border-color: rgba(27, 31, 35, 0.15);
+    background-color: #FFF5A9 !important;
+    border-color: rgba(27, 31, 35, .15);
   }
 
   /** Markdown */
@@ -795,7 +790,7 @@ the consistent color palette. */
   .CodeMirror-line::selection,
   .CodeMirror-line > span::selection,
   .CodeMirror-line > span > span::selection {
-    background-color: var(--black-4);
+    background-color: var(--black-4)
   }
 
   /** File editor syntax highlighting */
@@ -947,8 +942,8 @@ the consistent color palette. */
   .pagination .disabled:hover,
   .pagination .gap,
   .pagination .gap:hover,
-  .pagination [aria-disabled="true"],
-  .pagination [aria-disabled="true"]:hover {
+  .pagination [aria-disabled=true],
+  .pagination [aria-disabled=true]:hover {
     background-color: var(--white-2);
     color: var(--white-4);
   }
@@ -977,7 +972,7 @@ the consistent color palette. */
   }
 
   .navigation-focus .AvatarStack-body,
-  [aria-selected="true"] .AvatarStack-body {
+  [aria-selected=true] .AvatarStack-body {
     background-color: var(--white-2);
   }
 
@@ -1002,7 +997,7 @@ the consistent color palette. */
 
   .tabnav-tab.selected,
   .tabnav-tab[aria-current],
-  .tabnav-tab[aria-selected="true"] {
+  .tabnav-tab[aria-selected=true] {
     background-color: var(--white-1);
     color: var(--black-1);
     border-color: var(--white-4);
@@ -1024,7 +1019,7 @@ the consistent color palette. */
     }
 
     .tabnav--responsive .tabnav-tab.selected,
-    .tabnav--responsive .tabnav-tab[aria-selected="true"] {
+    .tabnav--responsive .tabnav-tab[aria-selected=true] {
       background-color: var(--white-1);
     }
   }
@@ -1124,16 +1119,14 @@ the consistent color palette. */
     color: var(--black-3);
   }
 
-  .timeline-comment.current-user
-    .previewable-comment-form
-    .comment-form-head.tabnav {
+  .timeline-comment.current-user .previewable-comment-form .comment-form-head.tabnav {
     background-color: var(--blue-3);
     border-color: var(--blue-4);
   }
 
   .timeline-comment.current-user .tabnav-tab.selected,
   .timeline-comment.current-user .tabnav-tab[aria-current],
-  .timeline-comment.current-user .tabnav-tab[aria-selected="true"] {
+  .timeline-comment.current-user .tabnav-tab[aria-selected=true] {
     border-color: var(--blue-4);
   }
 
@@ -1178,9 +1171,7 @@ the consistent color palette. */
 
   .branch-action-state-closed-dirty .branch-action-body:before,
   .branch-action-state-dirty .branch-action-body:before,
-  .is-rebasing
-    .branch-action-state-dirty-if-rebasing
-    .branch-action-body:before {
+  .is-rebasing .branch-action-state-dirty-if-rebasing .branch-action-body:before {
     border-right-color: var(--white-4);
   }
 
@@ -1326,8 +1317,8 @@ the consistent color palette. */
   }
 
   .select-menu-item.selected .description,
-  details-menu .select-menu-item[aria-checked="true"] .description,
-  details-menu .select-menu-item[aria-selected="true"] .description,
+  details-menu .select-menu-item[aria-checked=true] .description,
+  details-menu .select-menu-item[aria-selected=true] .description,
   .select-menu-item-text .description {
     color: var(--black-3);
   }
@@ -1338,7 +1329,7 @@ the consistent color palette. */
 
   .select-menu-text-filter:first-child:last-child,
   .select-menu-text-filter input {
-    border-color: var(--white-6);
+    border-color: var(--white-6)
   }
 
   .select-menu-divider,
@@ -1350,8 +1341,8 @@ the consistent color palette. */
   .select-menu-divider,
   .select-menu-header .select-menu-title,
   .select-menu-item.selected,
-  details-menu .select-menu-item[aria-checked="true"],
-  details-menu .select-menu-item[aria-selected="true"] {
+  details-menu .select-menu-item[aria-checked=true],
+  details-menu .select-menu-item[aria-selected=true] {
     color: var(--black-1);
   }
 
@@ -1360,9 +1351,9 @@ the consistent color palette. */
   }
 
   .select-menu-tabs .select-menu-tab-nav.selected,
-  .select-menu-tabs .select-menu-tab-nav[aria-selected="true"],
+  .select-menu-tabs .select-menu-tab-nav[aria-selected=true],
   .select-menu-tabs a.selected,
-  .select-menu-tabs a[aria-selected="true"] {
+  .select-menu-tabs a[aria-selected=true] {
     background-color: var(--white-1);
     border-color: var(--white-6) var(--white-6) var(--white-1);
     color: var(--black-1);
@@ -1386,10 +1377,7 @@ the consistent color palette. */
   }
 
   @media (min-width: 1012px) {
-    .page-responsive
-      .previewable-comment-form
-      .comment-form-head.tabnav
-      .toolbar-commenting {
+    .page-responsive .previewable-comment-form .comment-form-head.tabnav .toolbar-commenting {
       background-color: transparent !important;
     }
   }
@@ -1584,6 +1572,20 @@ the consistent color palette. */
     color: var(--s-chalky);
   }
 
+  /** Rich diff */
+  .rich-diff .markdown-body {
+    background-color: var(--white-1);
+  }
+
+  .prose-diff.collapsed .rich-diff-level-zero.expandable .octicon {
+    color: var(--white-4);
+  }
+
+  .prose-diff.collapsed .rich-diff-level-zero.expandable:hover .octicon {
+    color: var(--black-1);
+  }
+
+
   /** Commit range comparison */
   .range-editor {
     background-color: var(--white-2);
@@ -1633,7 +1635,7 @@ the consistent color palette. */
   }
 
   .commits-list-item.navigation-focus,
-  .commits-list-item[aria-selected="true"] {
+  .commits-list-item[aria-selected=true] {
     background-color: var(--white-2);
   }
 
@@ -1701,11 +1703,6 @@ the consistent color palette. */
   }
 
   /** Filters */
-  .filter-bar {
-    background-color: var(--white-1);
-    border-color: var(--white-1);
-  }
-
   .filter-item {
     color: var(--black-3);
   }
@@ -1716,7 +1713,7 @@ the consistent color palette. */
 
   .filter-item.selected,
   .filter-item[aria-current],
-  .filter-item[aria-selected="true"] {
+  .filter-item[aria-selected=true] {
     color: #fff;
     background-color: #0366d6;
   }
@@ -1731,12 +1728,6 @@ the consistent color palette. */
   .user-profile-nav {
     background-color: var(--white-1);
     border-color: var(--white-4);
-  }
-
-  .user-profile-sticky-bar:after {
-    background-color: var(--white-1);
-    border-color: var(--white-3);
-    height: 54px;
   }
 
   .UnderlineNav {
@@ -1755,7 +1746,7 @@ the consistent color palette. */
 
   .UnderlineNav-item.selected,
   .UnderlineNav-item[aria-current],
-  .UnderlineNav-item[role="tab"][aria-selected="true"] {
+  .UnderlineNav-item[role=tab][aria-selected=true] {
     border-color: #e36209;
     color: var(--black-1);
   }
@@ -1782,7 +1773,7 @@ the consistent color palette. */
 
   .menu-item.selected,
   .menu-item[aria-current],
-  .menu-item[aria-selected="true"] {
+  .menu-item[aria-selected=true] {
     background-color: var(--white-1);
     color: var(--black-1);
   }
@@ -1863,11 +1854,11 @@ the consistent color palette. */
 
   /** Insights graphs */
   .graph-canvas .axis .tick text {
-    fill: var(--black-1);
+    fill: var(--black-1)
   }
 
   .graph-canvas .axis line {
-    stroke: var(--white-3);
+    stroke: var(--white-5);
   }
 
   .tint-box {
@@ -1890,16 +1881,12 @@ the consistent color palette. */
     border-color: var(--white-6);
   }
 
-  .capped-card-content {
-    background-color: var(--white-2);
-  }
-
   /** File finder */
-  .tree-browser-result[aria-selected="true"] {
+  .tree-browser-result[aria-selected=true] {
     background-color: var(--white-1) !important;
   }
 
-  .tree-browser-result[aria-selected="true"] .octicon-chevron-right {
+  .tree-browser-result[aria-selected=true] .octicon-chevron-right {
     color: var(--blue-j);
   }
 
@@ -1950,7 +1937,7 @@ the consistent color palette. */
   /** Search results */
   .code-list .divider .blob-code,
   .code-list .divider .blob-num {
-    background-color: var(--s-context);
+    background-color: var(--s-context)
   }
 
   .code-list .file-box {
@@ -1992,13 +1979,12 @@ the consistent color palette. */
   .btn-invisible:active,
   .btn-invisible:focus,
   .btn-invisible:hover,
-  .btn-invisible[aria-selected="true"] {
+  .btn-invisible[aria-selected=true] {
     color: var(--blue-1);
   }
 
   /** Accepted discussion */
-  .timeline-comment.current-user.timeline-chosen-answer
-    .timeline-comment-header,
+  .timeline-comment.current-user.timeline-chosen-answer .timeline-comment-header,
   .timeline-comment.timeline-chosen-answer .timeline-comment-header {
     background-color: #24442c;
     border-color: #328449;
@@ -2022,10 +2008,7 @@ the consistent color palette. */
   }
 
   /** Responsive comment form */
-  .page-responsive
-    .previewable-comment-form
-    .comment-form-head.tabnav
-    .toolbar-commenting {
+  .page-responsive .previewable-comment-form .comment-form-head.tabnav .toolbar-commenting {
     background-color: var(--white-1);
   }
 
@@ -2053,7 +2036,7 @@ the consistent color palette. */
     background-color: var(--blue-1);
   }
 
-  .reaction-sort-item[aria-checked="true"] {
+  .reaction-sort-item[aria-checked=true] {
     background-color: var(--blue-3);
     border-color: var(--blue-1);
   }
@@ -2101,7 +2084,7 @@ the consistent color palette. */
   .orghead {
     background-color: var(--white-2);
     border-color: var(--white-5);
-    color: var(--black-2);
+    color: var(--black-2)
   }
 
   .pagehead-tabs-item.selected {
@@ -2269,8 +2252,8 @@ the consistent color palette. */
     background-color: var(--white-4);
   }
 
-  .SideNav-item[aria-current="page"]:before,
-  .SideNav-item[aria-selected="true"]:before {
+  .SideNav-item[aria-current=page]:before,
+  .SideNav-item[aria-selected=true]:before {
     background-color: #e36209;
   }
 
@@ -2278,8 +2261,8 @@ the consistent color palette. */
     box-shadow: 0 1px 0 var(--white-3);
   }
 
-  .SideNav-item[aria-current="page"],
-  .SideNav-item[aria-selected="true"] {
+  .SideNav-item[aria-current=page],
+  .SideNav-item[aria-selected=true] {
     background-color: var(--white-1);
     color: var(--black-1);
   }
@@ -2297,24 +2280,19 @@ the consistent color palette. */
     background-color: var(--blue-4);
     color: var(--black-3);
   }
-
+  
+  .file-navigation .get-repo-btn:first-child {
+    border-color: var(--white-3);
+  }
+  
   /** GitHub explore */
   .MarketplaceBackground-buffer {
     background-color: var(--white-2);
   }
 
-  /** User dashboard */
-  .header-nav-current-user .user-profile-link {
-    color: var(--black-1);
-  }
-
-  .avatar-before-user-status {
-    border-color: var(--white-3);
-  }
-
   /** Misc */
   .box-shadow {
-    box-shadow: 0 1px 1px #ffffff1a !important;
+    box-shadow: 0 1px 1px #ffffff1a !important
   }
 
   .protip code {
@@ -2341,5 +2319,9 @@ the consistent color palette. */
   .boxed-group > h3 a.boxed-group-breadcrumb,
   .Subhead-description {
     color: var(--black-3);
+  }
+
+  .header-nav-current-user .user-profile-link {
+    color: var(--black-1);
   }
 }
