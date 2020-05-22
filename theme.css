@@ -1664,8 +1664,8 @@ ul.comparison-list > li em {
 
 /** Filters */
 .filter-bar {
-  background-color: var(--s-background);
-  border-bottom: 1px solid var(--white-4);
+  background-color: var(--white-1);
+  border-color: var(--white-1);
 }
 
 .filter-item {
@@ -1697,7 +1697,7 @@ ul.comparison-list > li em {
 
 .user-profile-sticky-bar:after {
   background-color: var(--white-1);
-  border-bottom: 1px solid var(--white-3);
+  border-color: var(--white-3);
   height: 54px;
 }
 
@@ -1825,7 +1825,7 @@ ul.comparison-list > li em {
 
 /** Insights graphs */
 .graph-canvas .axis .tick text {
-  fill: var(--black-1)  
+  fill: var(--black-1);
 }
 
 .graph-canvas .axis line {
@@ -1853,7 +1853,7 @@ ul.comparison-list > li em {
 }
 
 .capped-card-content {
-  background: var(--white-1);
+  background-color: var(--white-2);
 }
 
 /** File finder */
