@@ -4,7 +4,13 @@
 
 Relieve the stress on your eyes when using GitHub with this custom dark theme! This uses a nice gray color rather than pure black to prevent overly contrasting colors.
 
-## Table of Contents
+## Installation
+
+- Install the Stylus extension for [Chrome/Edge](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en) or [FireFox](https://addons.mozilla.org/en-US/firefox/addon/styl-us)
+- Open [`theme.user.css`](https://github.com/mskelton/github-one-dark-theme/raw/master/theme.user.css)
+- Click the "Install style" button on the left to install the theme
+
+## Screenshots
 
 - [Repo Home](#repo-home)
 - [Issue List](#issue-list)
@@ -12,23 +18,23 @@ Relieve the stress on your eyes when using GitHub with this custom dark theme! T
 - [Source Viewer](#source-viewer)
 - [File Finder](#file-finder)
 
-## Repo Home
+### Repo Home
 
 ![Repo home](screenshots/repo.jpeg)
 
-## Issue List
+### Issue List
 
 ![Issue list](screenshots/issues.jpg)
 
-## Pull Request Details
+### Pull Request Details
 
 ![Pull request details](screenshots/pull-request.jpg)
 
-## Source Viewer
+### Source Viewer
 
 ![Source viewer](screenshots/editor.jpg)
 
-## File Finder
+### File Finder
 
 ![File finder](screenshots/file-finder.jpg)
 
