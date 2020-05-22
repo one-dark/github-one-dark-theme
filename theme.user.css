@@ -10,22 +10,22 @@
 @-moz-document regexp("^https://github.com/.*"),
 domain("gist.github.com") {
   /** Original colors
-  white-1 - fff
-  white-2 - f6f8fa
-  white-3 - e1e4e8
-  white-4 - d1d5da
-  white-5 - eaecef
-  white-6 - dfe2e5
-  white-7 - ccc
-  black-1 - 24292e
-  black-2 - 6a737d
-  black-3 - 586069
-  black-4 - 444d56
-  blue-1 - 0366d6
-  blue-2 - eaf5ff
-  blue-3 - f1f8ff
-  blue-4 - def
-*/
+    white-1 - fff
+    white-2 - f6f8fa
+    white-3 - e1e4e8
+    white-4 - d1d5da
+    white-5 - eaecef
+    white-6 - dfe2e5
+    white-7 - ccc
+    black-1 - 24292e
+    black-2 - 6a737d
+    black-3 - 586069
+    black-4 - 444d56
+    blue-1 - 0366d6
+    blue-2 - eaf5ff
+    blue-3 - f1f8ff
+    blue-4 - def
+  */
 
   :root {
     --white-1: #1e2022;
@@ -651,6 +651,11 @@ the consistent color palette. */
 
   .repository-lang-stats-graph .language-color:not(:first-child) {
     border-color: var(--white-1);
+  }
+
+  /** Clone button */
+  .file-navigation .get-repo-btn:first-child {
+    border-color: var(--white-3);
   }
 
   /** File table */
@@ -2293,6 +2298,20 @@ the consistent color palette. */
     color: var(--black-3);
   }
 
+  /** GitHub explore */
+  .MarketplaceBackground-buffer {
+    background-color: var(--white-2);
+  }
+
+  /** User dashboard */
+  .header-nav-current-user .user-profile-link {
+    color: var(--black-1);
+  }
+
+  .avatar-before-user-status {
+    border-color: var(--white-3);
+  }
+
   /** Misc */
   .box-shadow {
     box-shadow: 0 1px 1px #ffffff1a !important;
@@ -2322,9 +2341,5 @@ the consistent color palette. */
   .boxed-group > h3 a.boxed-group-breadcrumb,
   .Subhead-description {
     color: var(--black-3);
-  }
-
-  .header-nav-current-user .user-profile-link {
-    color: var(--black-1);
   }
 }
