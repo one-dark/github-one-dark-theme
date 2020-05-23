@@ -1718,6 +1718,12 @@ the consistent color palette. */
     border-top-color: var(--white-5);
   }
 
+  .CheckRun-search .btn[disabled] {
+    background-color: transparent;
+    background-image: none;
+    opacity: 0.3;
+  }
+
   /** Filters */
   .filter-bar {
     background-color: var(--white-1);
@@ -2362,6 +2368,40 @@ the consistent color palette. */
     color: var(--black-2);
   }
 
+  /** Developer settings */
+  .access-token {
+    border-color: var(--white-3);
+  }
+
+  .boxed-group-list > li {
+    border-color: var(--white-3);
+  }
+
+  .token-scope {
+    color: var(--black-1);
+  }
+
+  .oauth-app-info-container .user-count,
+  .oauth-app-info-container dl.keys dt {
+    color: var(--black-3);
+  }
+
+  .oauth-app-info-container dl.keys dd {
+    color: var(--black-1);
+  }
+
+  /** Breadcrumbs */
+  .boxed-group .heading a.boxed-group-breadcrumb,
+  .boxed-group > h3 a.boxed-group-breadcrumb,
+  .Subhead-description {
+    color: var(--black-3);
+  }
+
+  .breadcrumb-item-selected,
+  .breadcrumb-item[aria-current] {
+    color: var(--black-3);
+  }
+
   /** Misc */
   .box-shadow {
     box-shadow: 0 1px 1px #ffffff1a !important;
@@ -2385,11 +2425,5 @@ the consistent color palette. */
 
   .js-diff-placeholder {
     fill: var(--white-5);
-  }
-
-  .boxed-group .heading a.boxed-group-breadcrumb,
-  .boxed-group > h3 a.boxed-group-breadcrumb,
-  .Subhead-description {
-    color: var(--black-3);
   }
 }
