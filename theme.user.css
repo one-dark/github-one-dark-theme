@@ -1209,7 +1209,7 @@ the consistent color palette. */
   }
 
   .merge-status-item a {
-    background-color: none;
+    background-color: transparent !important;
   }
 
   .status-meta,
