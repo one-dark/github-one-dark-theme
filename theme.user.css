@@ -602,6 +602,10 @@ the consistent color palette. */
   }
 
   /** Sub nav */
+  .subnav-bordered {
+    border-color: var(--white-5);
+  }
+
   .subnav-item {
     border-color: var(--white-3);
     color: var(--black-3);
@@ -899,6 +903,10 @@ the consistent color palette. */
     border-left-color: var(--black-1);
   }
 
+  .tooltipped-e:before {
+    border-right-color: var(--black-1);
+  }
+
   /** Commit refs */
   .commit-ref {
     background-color: var(--blue-2);
@@ -1011,6 +1019,10 @@ the consistent color palette. */
   .tabnav-tab:focus,
   .tabnav-tab:hover {
     color: var(--black-1);
+  }
+
+  .tabnav-extra {
+    color: var(--black-3);
   }
 
   @media (max-width: 767px) {
@@ -1799,6 +1811,16 @@ the consistent color palette. */
     background-color: var(--white-5);
   }
 
+  /** User dashboard pins */
+  .pinned-item-checkbox:checked + .pinned-item-name {
+    background-color: var(--blue-3);
+    color: var(--black-1);
+  }
+
+  .pinned-item-name {
+    color: var(--black-1);
+  }
+
   /** Menu */
   .menu {
     background-color: var(--white-1);
@@ -2123,6 +2145,16 @@ the consistent color palette. */
     background-color: var(--white-1);
   }
 
+  @media (min-width: 768px) {
+    .composer.composer-responsive .timeline-comment {
+      border-color: var(--white-4);
+    }
+
+    .composer.composer-responsive .timeline-comment:before {
+      border-right-color: var(--white-4);
+    }
+  }
+
   /** Milestones */
   .milestone-title-link a {
     color: var(--black-1);
@@ -2170,13 +2202,27 @@ the consistent color palette. */
     border-bottom-color: var(--white-2);
   }
 
+  .dropdown-signed-commit .dropdown-menu-w:after {
+    border-bottom-color: transparent;
+    border-left-color: var(--white-2);
+  }
+
   .dropdown-menu:before {
     border-bottom-color: var(--white-3);
+  }
+
+  .dropdown-menu-w:before {
+    border-bottom-color: transparent;
+    border-left-color: var(--white-3);
   }
 
   .signed-commit-header {
     background-color: var(--white-2);
     border-color: var(--white-3);
+  }
+
+  .signed-commit-signer-name .signer {
+    color: var(--black-1);
   }
 
   /** Releases tab */
@@ -2351,6 +2397,10 @@ the consistent color palette. */
     border-color: var(--white-3);
   }
 
+  .profile-rollup-summarized + .profile-rollup-summarized {
+    border-color: var(--white-5);
+  }
+
   /** Existing PR panel */
   .list-group-item {
     border-color: var(--white-3);
@@ -2361,6 +2411,10 @@ the consistent color palette. */
   }
 
   .existing-pull .existing-pull-number {
+    color: var(--black-3);
+  }
+
+  .list-group-item .list-group-item-summary a {
     color: var(--black-3);
   }
 
@@ -2400,6 +2454,18 @@ the consistent color palette. */
   .breadcrumb-item-selected,
   .breadcrumb-item[aria-current] {
     color: var(--black-3);
+  }
+
+  /** Autocomplete */
+  .autocomplete-results {
+    background-color: var(--white-1);
+    border: 1px solid var(--white-3);
+    box-shadow: 0 0 5px rgba(108, 124, 140, 0.3);
+  }
+
+  /** Jump to line */
+  .linejump .linejump-input {
+    background-color: var(--white-2);
   }
 
   /** Misc */
