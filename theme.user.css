@@ -2383,6 +2383,10 @@ the consistent color palette. */
     color: var(--black-3);
   }
 
+  .oauth-org-access-details {
+    background-color: var(--white-1);
+  }
+
   /** GitHub explore */
   .MarketplaceBackground-buffer {
     background-color: var(--white-2);
