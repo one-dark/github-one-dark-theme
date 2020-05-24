@@ -2235,6 +2235,14 @@ the consistent color palette. */
     border-color: var(--white-1);
   }
 
+  .upload-progress {
+    box-shadow: none;
+  }
+
+  .uploaded-files.is-populated {
+    border-color: var(--white-3);
+  }
+
   @media (min-width: 768px) {
     .release-main-section {
       border-color: var(--white-3);
