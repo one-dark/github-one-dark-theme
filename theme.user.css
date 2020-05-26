@@ -1852,7 +1852,7 @@ the consistent color palette. */
   }
 
   .menu-item.selected,
-  .menu-item[aria-current],
+  .menu-item[aria-current]:not([aria-current="false"]),
   .menu-item[aria-selected="true"] {
     background-color: var(--white-1);
     color: var(--black-1);
