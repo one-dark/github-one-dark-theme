@@ -326,6 +326,10 @@ domain("gist.github.com") {
     background-color: var(--blue-3);
   }
 
+  .Box-row--gray {
+    background-color: var(--white-2);
+  }
+
   .Box-row--yellow,
   .Box-row--yellow .border-top {
     border-color: var(--blue-4) !important;
@@ -361,6 +365,10 @@ domain("gist.github.com") {
   .table-list-header {
     background-color: var(--white-2);
     border-color: var(--white-3);
+  }
+
+  .table-list-header-meta {
+    color: var(--black-3);
   }
 
   .table-list-header-toggle .btn-link:hover,
