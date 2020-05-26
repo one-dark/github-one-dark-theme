@@ -2039,6 +2039,10 @@ the consistent color palette. */
     color: var(--white-1);
   }
 
+  .codesearch-results .repo-list-item + .repo-list-item {
+    border-color: var(--white-3);
+  }
+
   /** Discussion tab */
   .icon-discussion-gray,
   .icon-discussion-gray path {
