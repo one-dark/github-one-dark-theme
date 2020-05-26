@@ -1019,7 +1019,7 @@ the consistent color palette. */
   }
 
   .tabnav-tab.selected,
-  .tabnav-tab[aria-current],
+  .tabnav-tab[aria-current]:not([aria-current="false"]),
   .tabnav-tab[aria-selected="true"] {
     background-color: var(--white-1);
     color: var(--black-1);
