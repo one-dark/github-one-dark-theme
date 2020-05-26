@@ -12,3 +12,4 @@ jobs:
       - uses: creyD/prettier_action@v2.2
         with:
           commit_message: Apply formatting changes
+          prettier_options: --write **/*.css
