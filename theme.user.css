@@ -321,6 +321,15 @@ domain("gist.github.com") {
   .Box-row--blue {
     background-color: var(--blue-3);
   }
+  
+  .Box-row--yellow {
+    background-color: var(--blue-3);
+  }
+  
+  .Box-row--yellow,
+    .Box-row--yellow .border-top {
+    border-color: var(--blue-4) !important
+  }
 
   .Box-row {
     border-color: var(--white-3);
@@ -347,6 +356,7 @@ domain("gist.github.com") {
   .Box--danger .Box-row:first-of-type {
     border-color: #d73a49;
   }
+ 
 
   /** Tables */
   .table-list-header {
