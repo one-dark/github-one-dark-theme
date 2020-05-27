@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitHub One Dark Theme
 @namespace      github.com/mskelton
-@version        1.4.0
+@version        1.4.1
 @description    Relieve the stress on your eyes when using GitHub with this custom dark theme! This uses a nice gray color rather than pure black to prevent overly contrasting colors.
 @author         Mark Skelton
 @license        MIT
@@ -119,7 +119,8 @@ domain("gist.github.com") {
 
   a,
   .btn-link,
-  .btn-octicon:hover {
+  .btn-octicon:hover,
+  .commit-link {
     color: var(--blue-1);
   }
 
@@ -546,6 +547,20 @@ domain("gist.github.com") {
     border-top-color: var(--white-4);
   }
 
+  .Popover-message--left-bottom:after,
+  .Popover-message--left-top:after,
+  .Popover-message--left:after {
+    border-bottom-color: transparent;
+    border-right-color: var(--white-1);
+  }
+
+  .Popover-message--left-bottom:before,
+  .Popover-message--left-top:before,
+  .Popover-message--left:before {
+    border-bottom-color: transparent;
+    border-right-color: var(--white-4);
+  }
+
   /** Load more button */
   .ajax-pagination-form .ajax-pagination-btn {
     background-color: var(--white-1);
@@ -752,12 +767,11 @@ the consistent color palette. */
     color: var(--black-3);
   }
 
-  /** Use the original colors for yellow labels */
   .Label--outline.bg-yellow-light,
   .Label.bg-yellow-light {
-    color: #586069;
-    background-color: #fff5a9 !important;
-    border-color: rgba(27, 31, 35, 0.15);
+    color: #000;
+    background-color: var(--blue-1);
+    border-color: var(--blue-1);
   }
 
   /** Markdown */
@@ -891,20 +905,23 @@ the consistent color palette. */
   }
 
   .ellipsis-expander,
-  .hidden-text-expander a {
-    background-color: var(--blue-4);
-    color: var(--black-2);
+  .hidden-text-expander a,
+  .email-format .email-hidden-toggle a {
+    background-color: var(--blue-4) !important;
+    color: var(--black-2) !important;
   }
 
   .ellipsis-expander:hover,
-  .hidden-text-expander a:hover {
-    background-color: var(--blue-5);
+  .hidden-text-expander a:hover,
+  .email-format .email-hidden-toggle a:hover {
+    background-color: var(--blue-5) !important;
   }
 
   .ellipsis-expander:active,
-  .hidden-text-expander a:active {
-    color: var(--black-1);
-    background-color: var(--blue-5);
+  .hidden-text-expander a:active,
+  .email-format .email-hidden-toggle a:active {
+    color: var(--black-1) !important;
+    background-color: var(--blue-5) !important;
   }
 
   /** Icons */
@@ -1146,7 +1163,7 @@ the consistent color palette. */
   }
 
   .timeline-comment-label {
-    border-color: var(--black-4);
+    border-color: var(--white-4);
   }
 
   .previewable-comment-form .comment-body {
@@ -2054,6 +2071,8 @@ the consistent color palette. */
     border-color: var(--white-3);
   }
 
+  .commits-list-item + .commits-list-item,
+  .issue-list-item + .issue-list-item,
   .code-list .code-list-item + .code-list-item {
     border-color: var(--white-3);
   }
@@ -2546,6 +2565,23 @@ the consistent color palette. */
 
   .protected-branch-pusher {
     color: var(--black-1);
+  }
+
+  /** Code references */
+  .pl-token.active,
+  .pl-token:hover {
+    background-color: var(--blue-4);
+  }
+
+  .TagsearchPopover-list .TagsearchPopover-list-item:hover {
+    background-color: var(--white-2);
+  }
+
+  /**  */
+  .email-format .email-quoted-reply,
+  .email-format .email-signature-reply {
+    border-color: var(--white-6);
+    color: var(--black-3);
   }
 
   /** Misc */
