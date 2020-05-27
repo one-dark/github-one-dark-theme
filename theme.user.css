@@ -905,20 +905,23 @@ the consistent color palette. */
   }
 
   .ellipsis-expander,
-  .hidden-text-expander a {
-    background-color: var(--blue-4);
-    color: var(--black-2);
+  .hidden-text-expander a,
+  .email-format .email-hidden-toggle a {
+    background-color: var(--blue-4) !important;
+    color: var(--black-2) !important;
   }
 
   .ellipsis-expander:hover,
-  .hidden-text-expander a:hover {
-    background-color: var(--blue-5);
+  .hidden-text-expander a:hover,
+  .email-format .email-hidden-toggle a:hover {
+    background-color: var(--blue-5) !important;
   }
 
   .ellipsis-expander:active,
-  .hidden-text-expander a:active {
-    color: var(--black-1);
-    background-color: var(--blue-5);
+  .hidden-text-expander a:active,
+  .email-format .email-hidden-toggle a:active {
+    color: var(--black-1) !important;
+    background-color: var(--blue-5) !important;
   }
 
   /** Icons */
@@ -2572,6 +2575,13 @@ the consistent color palette. */
 
   .TagsearchPopover-list .TagsearchPopover-list-item:hover {
     background-color: var(--white-2);
+  }
+
+  /**  */
+  .email-format .email-quoted-reply,
+  .email-format .email-signature-reply {
+    border-color: var(--white-6);
+    color: var(--black-3);
   }
 
   /** Misc */
