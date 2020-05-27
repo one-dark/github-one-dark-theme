@@ -2564,6 +2564,16 @@ the consistent color palette. */
     color: var(--black-1);
   }
 
+  /** Code references */
+  .pl-token.active,
+  .pl-token:hover {
+    background-color: var(--blue-4);
+  }
+
+  .TagsearchPopover-list .TagsearchPopover-list-item:hover {
+    background-color: var(--white-2);
+  }
+
   /** Misc */
   .box-shadow {
     box-shadow: 0 1px 1px #ffffff1a !important;
