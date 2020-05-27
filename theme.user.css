@@ -882,19 +882,19 @@ the consistent color palette. */
 
   .ellipsis-expander,
   .hidden-text-expander a {
-    background-color: var(--white-6);
-    color: var(--black-4);
+    background-color: var(--blue-4);
+    color: var(--black-2);
   }
 
   .ellipsis-expander:hover,
   .hidden-text-expander a:hover {
-    background-color: var(--white-4);
+    background-color: var(--blue-5);
   }
 
   .ellipsis-expander:active,
   .hidden-text-expander a:active {
-    color: var(--white-1);
-    background-color: var(--blue-1);
+    color: var(--black-1);
+    background-color: var(--blue-5);
   }
 
   /** Icons */
