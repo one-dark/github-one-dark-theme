@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitHub One Dark Theme
 @namespace      github.com/mskelton
-@version        1.3.2
+@version        1.4.0
 @description    Relieve the stress on your eyes when using GitHub with this custom dark theme! This uses a nice gray color rather than pure black to prevent overly contrasting colors.
 @author         Mark Skelton
 @license        MIT
@@ -189,20 +189,29 @@ domain("gist.github.com") {
 
   /** Buttons */
   .btn:not(.btn-primary) {
-    border-color: var(--white-6);
+    border-color: #4f5457;
   }
 
   .btn:not(.btn-primary):not(.btn-outline) {
-    background-color: var(--white-3);
-    background-image: linear-gradient(-180deg, #696464, var(--white-6) 90%);
+    background-color: #454c4e;
+    background-image: linear-gradient(-180deg, #505658, #414648 90%);
     color: var(--black-1);
   }
 
   .btn:not(.btn-primary):not(.btn-outline).hover,
   .btn:not(.btn-primary):not(.btn-outline):hover {
-    background-color: var(--white-4);
-    background-image: linear-gradient(-180deg, #635e5e, #4d4b4b 90%);
-    border-color: var(--white-4);
+    background-color: #3e4446;
+    background-image: linear-gradient(-180deg, #4c5153, #3d4244 90%);
+    border-color: #4d5456;
+  }
+
+  .btn:not(.btn-primary).selected,
+  .btn:not(.btn-primary)[aria-selected="true"],
+  .btn:not(.btn-primary).selected:hover,
+  .btn:not(.btn-primary)[aria-selected="true"]:hover {
+    background-color: var(--white-1);
+    background-image: none;
+    border-color: var(--white-3);
   }
 
   .btn-outline {
@@ -227,14 +236,22 @@ domain("gist.github.com") {
   }
 
   .btn-danger {
-    background-image: linear-gradient(-180deg, #cb2431, #941a24 90%) !important;
-    border-color: #b31a26 !important;
-    color: #fff !important;
+    color: #d01727 !important;
   }
 
-  .btn-danger:hover {
-    background-color: #cb2431;
-    background-image: linear-gradient(-180deg, #de4450, #cb2431 90%) !important;
+  .btn-danger.disabled,
+  .btn-danger:disabled,
+  .btn-danger[aria-disabled="true"] {
+    background-color: #373b3e !important;
+    background-image: none !important;
+    color: #983e45 !important;
+  }
+
+  .btn-link:disabled,
+  .btn-link:disabled:hover,
+  .btn-link[aria-disabled="true"],
+  .btn-link[aria-disabled="true"]:hover {
+    color: var(--white-3);
   }
 
   /** Forms */
@@ -875,19 +892,19 @@ the consistent color palette. */
 
   .ellipsis-expander,
   .hidden-text-expander a {
-    background-color: var(--white-6);
-    color: var(--black-4);
+    background-color: var(--blue-4);
+    color: var(--black-2);
   }
 
   .ellipsis-expander:hover,
   .hidden-text-expander a:hover {
-    background-color: var(--white-4);
+    background-color: var(--blue-5);
   }
 
   .ellipsis-expander:active,
   .hidden-text-expander a:active {
-    color: var(--white-1);
-    background-color: var(--blue-1);
+    color: var(--black-1);
+    background-color: var(--blue-5);
   }
 
   /** Icons */
@@ -2509,6 +2526,11 @@ the consistent color palette. */
     color: var(--black-1);
   }
 
+  .UnderlineNav-item:focus .UnderlineNav-octicon,
+  .UnderlineNav-item:hover .UnderlineNav-octicon {
+    color: var(--black-2);
+  }
+
   .commit-message .issue-link {
     color: var(--black-1);
   }
@@ -2545,5 +2567,9 @@ the consistent color palette. */
 
   .js-diff-placeholder {
     fill: var(--white-5);
+  }
+
+  .user-status-message-wrapper {
+    color: #24292e !important;
   }
 }
