@@ -2516,6 +2516,11 @@ the consistent color palette. */
     color: var(--black-1);
   }
 
+  .UnderlineNav-item:focus .UnderlineNav-octicon,
+  .UnderlineNav-item:hover .UnderlineNav-octicon {
+    color: var(--black-2);
+  }
+
   .commit-message .issue-link {
     color: var(--black-1);
   }
