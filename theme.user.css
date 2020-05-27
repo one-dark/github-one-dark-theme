@@ -189,20 +189,20 @@ domain("gist.github.com") {
 
   /** Buttons */
   .btn:not(.btn-primary) {
-    border-color: var(--white-6);
+    border-color: #4f5457;
   }
 
   .btn:not(.btn-primary):not(.btn-outline) {
-    background-color: var(--white-3);
-    background-image: linear-gradient(-180deg, #696464, var(--white-6) 90%);
+    background-color: #454c4e;
+    background-image: linear-gradient(-180deg, #505658, #414648 90%);
     color: var(--black-1);
   }
 
   .btn:not(.btn-primary):not(.btn-outline).hover,
   .btn:not(.btn-primary):not(.btn-outline):hover {
-    background-color: var(--white-4);
-    background-image: linear-gradient(-180deg, #635e5e, #4d4b4b 90%);
-    border-color: var(--white-4);
+    background-color: #3e4446;
+    background-image: linear-gradient(-180deg, #4c5153, #3d4244 90%);
+    border-color: #4d5456;
   }
 
   .btn-outline {
