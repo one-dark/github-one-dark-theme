@@ -205,6 +205,15 @@ domain("gist.github.com") {
     border-color: #4d5456;
   }
 
+  .btn:not(.btn-primary).selected,
+  .btn:not(.btn-primary)[aria-selected="true"],
+  .btn:not(.btn-primary).selected:hover,
+  .btn:not(.btn-primary)[aria-selected="true"]:hover {
+    background-color: var(--white-1);
+    background-image: none;
+    border-color: var(--white-3);
+  }
+
   .btn-outline {
     background-color: var(--white-1);
     color: var(--blue-1);
