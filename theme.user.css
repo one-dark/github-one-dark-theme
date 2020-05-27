@@ -236,14 +236,15 @@ domain("gist.github.com") {
   }
 
   .btn-danger {
-    background-image: linear-gradient(-180deg, #cb2431, #941a24 90%) !important;
-    border-color: #b31a26 !important;
-    color: #fff !important;
+    color: #d01727 !important;
   }
 
-  .btn-danger:hover {
-    background-color: #cb2431;
-    background-image: linear-gradient(-180deg, #de4450, #cb2431 90%) !important;
+  .btn-danger.disabled,
+  .btn-danger:disabled,
+  .btn-danger[aria-disabled="true"] {
+    background-color: #373b3e !important;
+    background-image: none !important;
+    color: #983e45 !important;
   }
 
   .btn-link:disabled,
