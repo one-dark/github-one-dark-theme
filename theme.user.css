@@ -119,7 +119,8 @@ domain("gist.github.com") {
 
   a,
   .btn-link,
-  .btn-octicon:hover {
+  .btn-octicon:hover,
+  .commit-link {
     color: var(--blue-1);
   }
 
