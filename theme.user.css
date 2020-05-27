@@ -237,6 +237,13 @@ domain("gist.github.com") {
     background-image: linear-gradient(-180deg, #de4450, #cb2431 90%) !important;
   }
 
+  .btn-link:disabled,
+  .btn-link:disabled:hover,
+  .btn-link[aria-disabled="true"],
+  .btn-link[aria-disabled="true"]:hover {
+    color: var(--white-3);
+  }
+
   /** Forms */
   ::placeholder {
     color: var(--black-2);
@@ -2545,5 +2552,9 @@ the consistent color palette. */
 
   .js-diff-placeholder {
     fill: var(--white-5);
+  }
+
+  .user-status-message-wrapper {
+    color: #24292e !important;
   }
 }
