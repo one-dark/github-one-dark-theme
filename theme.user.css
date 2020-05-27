@@ -546,6 +546,20 @@ domain("gist.github.com") {
     border-top-color: var(--white-4);
   }
 
+  .Popover-message--left-bottom:after,
+  .Popover-message--left-top:after,
+  .Popover-message--left:after {
+    border-bottom-color: transparent;
+    border-right-color: var(--white-1);
+  }
+
+  .Popover-message--left-bottom:before,
+  .Popover-message--left-top:before,
+  .Popover-message--left:before {
+    border-bottom-color: transparent;
+    border-right-color: var(--white-4);
+  }
+
   /** Load more button */
   .ajax-pagination-form .ajax-pagination-btn {
     background-color: var(--white-1);
