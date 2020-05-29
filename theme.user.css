@@ -2255,6 +2255,17 @@ the consistent color palette. */
     color: var(--black-4);
   }
 
+  /** Organization member management */
+  .org-user-notice-content strong {
+    color: var(--black-1);
+  }
+
+  .manage-member-meta-item,
+  .manage-member-meta-item .btn-link,
+  .manage-member-meta-item > .octicon {
+    color: var(--black-3);
+  }
+
   /** Signed commits */
   .dropdown-signed-commit .dropdown-menu:after {
     border-bottom-color: var(--white-2);
