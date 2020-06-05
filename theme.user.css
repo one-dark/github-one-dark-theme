@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitHub One Dark Theme
 @namespace      github.com/mskelton
-@version        1.4.7
+@version        1.4.8
 @description    Relieve the stress on your eyes when using GitHub with this custom dark theme! This uses a nice gray color rather than pure black to prevent overly contrasting colors.
 @author         Mark Skelton
 @license        MIT
@@ -2470,6 +2470,10 @@ the consistent color palette. */
     background-color: var(--white-1);
   }
 
+  .oauth-application-whitelist .request-info strong {
+    color: var(--black-1);
+  }
+
   /** GitHub explore */
   .MarketplaceBackground-buffer {
     background-color: var(--white-2);
@@ -2516,6 +2520,16 @@ the consistent color palette. */
 
   .boxed-group-list > li {
     border-color: var(--white-3);
+  }
+
+  .boxed-group-inner .help,
+  .boxed-group-inner .tabnav-tab.selected,
+  .boxed-group-list > li:first-child {
+    border-color: var(--white-6);
+  }
+
+  .boxed-group-inner .help {
+    color: var(--black-3);
   }
 
   .token-scope {
