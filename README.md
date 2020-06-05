@@ -1,7 +1,7 @@
 # GitHub One Dark Theme
 
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://github.com/mskelton/github-one-dark-theme/raw/master/theme.user.css)
-[![All Contributors](https://img.shields.io/github/all-contributors/one-dark/github-one-dark-theme?color=orange)](#contributors)
+[![All Contributors](https://img.shields.io/github/all-contributors/one-dark/github-one-dark-theme?color=orange)](#contributors-)
 
 Relieve the stress on your eyes when using GitHub with this custom dark theme! This uses a nice gray color rather than pure black to prevent overly contrasting colors.
 
