@@ -2635,6 +2635,14 @@ the consistent color palette. */
     color: var(--black-3);
   }
 
+  /** Issue list label select menu */
+  .label-select-menu .select-menu-item.navigation-focus,
+  .label-select-menu .select-menu-item:focus,
+  .label-select-menu .select-menu-item:hover,
+  .label-select-menu .select-menu-item[aria-selected="true"] {
+    background-color: var(--white-2);
+  }
+
   /** Misc */
   .box-shadow {
     box-shadow: 0 1px 1px #ffffff1a !important;
