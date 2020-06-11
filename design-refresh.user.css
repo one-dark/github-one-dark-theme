@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitHub One Dark Theme (Design Refresh)
 @namespace      github.com/mskelton
-@version        1.0.0
+@version        1.0.1
 @description    Copy of the original theme but adjusted with the design updates feature preview turned on. If the updates refresh becomes a permanent feature, this will become the main theme.
 @author         Mark Skelton
 @license        MIT
@@ -46,7 +46,7 @@ domain("gist.github.com") {
     --blue-4: #34465f;
     --blue-5: #405675;
 
-    --box-shadow: #5d5d5d26;
+    --box-shadow: #4e4e4e26;
 
     /* Syntax highlighting */
     --s-background: #282c34;
@@ -431,7 +431,7 @@ domain("gist.github.com") {
   /** Popovers */
   .SelectMenu-modal {
     background-color: var(--white-2);
-    box-shadow: 0 8px 24px rgba(53, 56, 58, 0.3);
+    box-shadow: 0 8px 24px var(--box-shadow);
   }
 
   .SelectMenu-header {
@@ -1907,6 +1907,7 @@ the consistent color palette. */
 
   .menu-item {
     border-color: var(--white-3);
+    color: var(--black-1);
   }
 
   .menu-item:hover {
@@ -2684,6 +2685,6 @@ the consistent color palette. */
   }
 
   .box-shadow-large {
-    box-shadow: 0 8px 24px rgba(53, 56, 58, 0.3);
+    box-shadow: 0 8px 24px var(--box-shadow) !important;
   }
 }
