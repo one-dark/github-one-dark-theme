@@ -208,25 +208,8 @@ domain("gist.github.com") {
     background-color: #3e3f3f;
   }
 
-  .btn-outline {
-    background-color: var(--white-1);
-    color: var(--blue-1);
-  }
-
-  .btn-outline.disabled,
-  .btn-outline:disabled,
-  .btn-outline[aria-disabled="true"] {
-    background-color: var(--white-1);
-    border-color: var(--white-3) !important;
-    color: var(--black-4);
-  }
-
-  .btn-outline.selected,
-  .btn-outline:active,
-  .btn-outline:hover,
-  .btn-outline[aria-selected="true"],
-  [open] > .btn-outline {
-    border-color: #0366d6;
+  .btn .octicon {
+    color: var(--black-2);
   }
 
   .btn-danger {
@@ -322,7 +305,7 @@ domain("gist.github.com") {
 
   .Box-header {
     background-color: var(--white-2);
-    border-color: var(--white-4);
+    border-color: var(--white-3);
   }
 
   .Box-header--blue {
@@ -449,6 +432,11 @@ domain("gist.github.com") {
     .SelectMenu-modal {
       border-color: var(--white-4);
     }
+  }
+
+  .SelectMenu-tabs,
+  .SelectMenu-tab {
+    box-shadow: inset 0 -1px 0 var(--white-5);
   }
 
   .SelectMenu-list {
@@ -757,12 +745,13 @@ the consistent color palette. */
   }
 
   /** Labels */
+  .label,
   .Label {
-    color: var(--white-1);
+    border-color: var(--white-3);
   }
 
-  .Label--gray {
-    background-color: var(--white-5);
+  .Label--gray,
+  .Label--outline {
     color: var(--black-3);
   }
 
@@ -782,6 +771,12 @@ the consistent color palette. */
     color: #000;
     background-color: var(--blue-1);
     border-color: var(--blue-1);
+  }
+
+  .Label--green,
+  .Label--outline-green {
+    color: #22863a;
+    border-color: #28a745;
   }
 
   /** Markdown */
@@ -2686,5 +2681,9 @@ the consistent color palette. */
 
   .box-shadow-large {
     box-shadow: 0 8px 24px var(--box-shadow) !important;
+  }
+
+  .follow-list .follow-list-info {
+    color: var(--black-3);
   }
 }
