@@ -2659,4 +2659,8 @@ the consistent color palette. */
   .user-status-message-wrapper {
     color: #24292e !important;
   }
+
+  .saved-reply-form {
+    border-color: var(--white-4);
+  }
 }
