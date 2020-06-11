@@ -1,5 +1,5 @@
 /* ==UserStyle==
-@name           GitHub One Dark Theme - Design Updates
+@name           GitHub One Dark Theme (Design Refresh)
 @namespace      github.com/mskelton
 @version        1.0.0
 @description    Copy of the original theme but adjusted with the design updates feature preview turned on. If the updates refresh becomes a permanent feature, this will become the main theme.
@@ -190,29 +190,22 @@ domain("gist.github.com") {
 
   /** Buttons */
   .btn:not(.btn-primary) {
-    border-color: #4f5457;
-  }
-
-  .btn:not(.btn-primary):not(.btn-outline) {
-    background-color: #454c4e;
-    background-image: linear-gradient(-180deg, #505658, #414648 90%);
+    background-color: var(--white-3);
+    border-color: #4e4e4e;
+    box-shadow: none;
     color: var(--black-1);
   }
 
-  .btn:not(.btn-primary):not(.btn-outline).hover,
-  .btn:not(.btn-primary):not(.btn-outline):hover {
-    background-color: #3e4446;
-    background-image: linear-gradient(-180deg, #4c5153, #3d4244 90%);
-    border-color: #4d5456;
+  .btn:not(.btn-primary).hover,
+  .btn:not(.btn-primary):hover,
+  [open] > .btn:not(.btn-primary) {
+    background-color: #414243;
   }
 
   .btn:not(.btn-primary).selected,
-  .btn:not(.btn-primary)[aria-selected="true"],
-  .btn:not(.btn-primary).selected:hover,
-  .btn:not(.btn-primary)[aria-selected="true"]:hover {
-    background-color: var(--white-1);
-    background-image: none;
-    border-color: var(--white-3);
+  .btn:not(.btn-primary):active,
+  .btn:not(.btn-primary)[aria-selected="true"] {
+    background-color: #3e3f3f;
   }
 
   .btn-outline {
@@ -263,7 +256,8 @@ domain("gist.github.com") {
   .form-control,
   .form-select {
     background-color: var(--white-1);
-    border-color: var(--white-4);
+    border-color: var(--white-3);
+    box-shadow: none;
     color: var(--black-1);
   }
 
@@ -323,7 +317,7 @@ domain("gist.github.com") {
   /** Boxes */
   .Box {
     background-color: var(--white-1);
-    border-color: var(--white-4);
+    border-color: var(--white-3);
   }
 
   .Box-header {
@@ -359,6 +353,8 @@ domain("gist.github.com") {
 
   .Box-row--hover-blue:hover {
     background-color: var(--blue-3);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
   }
 
   .Box-row--focus-gray.navigation-focus {
@@ -435,6 +431,18 @@ domain("gist.github.com") {
   /** Popovers */
   .SelectMenu-modal {
     background-color: var(--white-2);
+    box-shadow: 0 8px 24px rgba(53, 56, 58, 0.3);
+  }
+
+  .SelectMenu-header {
+    border-color: var(--white-5);
+  }
+
+  @media (hover: hover) {
+    .SelectMenu-closeButton:hover,
+    body:not(.intent-mouse) .SelectMenu-closeButton:focus {
+      color: var(--black-1);
+    }
   }
 
   @media (min-width: 544px) {
@@ -608,6 +616,7 @@ the consistent color palette. */
   .topic-tag,
   .topic-tag-action {
     background-color: var(--blue-3);
+    color: var(--blue-1);
   }
 
   .topic-tag-link:hover {
@@ -1373,8 +1382,9 @@ the consistent color palette. */
   /** Header counts */
   .social-count {
     background-color: var(--white-1);
-    color: var(--black-1);
     border-color: var(--white-3);
+    box-shadow: none;
+    color: var(--black-1);
   }
 
   .social-count:hover {
@@ -1838,6 +1848,7 @@ the consistent color palette. */
 
   .UnderlineNav {
     border-color: var(--white-3);
+    box-shadow: inset 0 -1px 0 var(--white-3);
   }
 
   .UnderlineNav-item {
@@ -2670,5 +2681,9 @@ the consistent color palette. */
 
   .saved-reply-form {
     border-color: var(--white-4);
+  }
+
+  .box-shadow-large {
+    box-shadow: 0 8px 24px rgba(53, 56, 58, 0.3);
   }
 }
