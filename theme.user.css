@@ -1394,6 +1394,10 @@ the consistent color palette. */
     border-color: var(--white-5);
   }
 
+  .select-menu-action {
+    color: var(--black-4);
+  }
+
   .select-menu-item.selected .description,
   details-menu .select-menu-item[aria-checked="true"] .description,
   details-menu .select-menu-item[aria-selected="true"] .description,
