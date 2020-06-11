@@ -1394,6 +1394,10 @@ the consistent color palette. */
     border-color: var(--white-5);
   }
 
+  .select-menu-action {
+    color: var(--black-4);
+  }
+
   .select-menu-item.selected .description,
   details-menu .select-menu-item[aria-checked="true"] .description,
   details-menu .select-menu-item[aria-selected="true"] .description,
@@ -2453,7 +2457,7 @@ the consistent color palette. */
     box-shadow: 0 1px 0 var(--white-3);
   }
 
-  .SideNav-item[aria-current="page"],
+  .SideNav-item[aria-current]:not([aria-current="false"]),
   .SideNav-item[aria-selected="true"] {
     background-color: var(--white-1);
     color: var(--black-1);
@@ -2631,6 +2635,14 @@ the consistent color palette. */
     color: var(--black-3);
   }
 
+  /** Issue list label select menu */
+  .label-select-menu .select-menu-item.navigation-focus,
+  .label-select-menu .select-menu-item:focus,
+  .label-select-menu .select-menu-item:hover,
+  .label-select-menu .select-menu-item[aria-selected="true"] {
+    background-color: var(--white-2);
+  }
+
   /** Misc */
   .box-shadow {
     box-shadow: 0 1px 1px #ffffff1a !important;
@@ -2654,5 +2666,9 @@ the consistent color palette. */
 
   .user-status-message-wrapper {
     color: #24292e !important;
+  }
+
+  .saved-reply-form {
+    border-color: var(--white-4);
   }
 }
