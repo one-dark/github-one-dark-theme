@@ -205,7 +205,7 @@ domain("gist.github.com") {
   .btn:not(.btn-primary).selected,
   .btn:not(.btn-primary):active,
   .btn:not(.btn-primary)[aria-selected="true"] {
-    background-color: #3e3f3f;
+    background-color: #333333;
   }
 
   .btn:not(.btn-primary) .octicon {
