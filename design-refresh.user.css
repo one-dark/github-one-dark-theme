@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitHub One Dark Theme (Design Refresh)
 @namespace      github.com/mskelton
-@version        1.0.2
+@version        1.0.3
 @description    Copy of the original theme but adjusted with the design updates feature preview turned on. If the updates refresh becomes a permanent feature, this will become the main theme.
 @author         Mark Skelton
 @license        MIT
@@ -205,7 +205,7 @@ domain("gist.github.com") {
   .btn:not(.btn-primary).selected,
   .btn:not(.btn-primary):active,
   .btn:not(.btn-primary)[aria-selected="true"] {
-    background-color: #3e3f3f;
+    background-color: #333333;
   }
 
   .btn:not(.btn-primary) .octicon {
@@ -761,7 +761,7 @@ the consistent color palette. */
 
   .Label--gray-darker {
     background-color: var(--black-2);
-    color: var(--white-1);
+    color: var(--black-1);
   }
 
   .Label--outline {
@@ -1007,8 +1007,11 @@ the consistent color palette. */
   .pagination a,
   .pagination em,
   .pagination span {
-    background: var(--white-1);
-    border-color: var(--white-3);
+    color: var(--black-1);
+  }
+
+  .pagination .next_page,
+  .pagination .previous_page {
     color: var(--blue-1);
   }
 
@@ -1018,8 +1021,7 @@ the consistent color palette. */
   .pagination .gap:hover,
   .pagination [aria-disabled="true"],
   .pagination [aria-disabled="true"]:hover {
-    background-color: var(--white-2);
-    color: var(--white-4);
+    color: var(--black-2);
   }
 
   .pagination a:focus,
@@ -1028,7 +1030,6 @@ the consistent color palette. */
   .pagination em:hover,
   .pagination span:focus,
   .pagination span:hover {
-    background-color: var(--white-5);
     border-color: var(--white-3);
   }
 
