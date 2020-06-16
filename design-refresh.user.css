@@ -761,7 +761,7 @@ the consistent color palette. */
 
   .Label--gray-darker {
     background-color: var(--black-2);
-    color: var(--white-1);
+    color: var(--black-1);
   }
 
   .Label--outline {
