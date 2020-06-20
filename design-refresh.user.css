@@ -1281,6 +1281,10 @@ the consistent color palette. */
     border-color: var(--white-3);
   }
 
+  .branch-action-item.border-gray-dark {
+    border-color: var(--white-3) !important;
+  }
+
   .branch-action-body .merge-branch-form,
   .branch-action-body .merge-message {
     background-color: var(--white-2);
@@ -2454,6 +2458,11 @@ the consistent color palette. */
 
   .flash-warn .link-gray-dark {
     color: #24292e !important;
+  }
+
+  .flash-warn a,
+  .flash-warn .btn-link {
+    color: #0366d6;
   }
 
   /** Side nav */
