@@ -1724,7 +1724,8 @@ the consistent color palette. */
 
   /** PR commits tab */
   .table-list-bordered,
-  .table-list-bordered .table-list-cell:first-child {
+  .table-list-bordered .table-list-cell:first-child,
+  .table-list-bordered .table-list-cell:last-child {
     border-color: var(--white-5);
   }
 
