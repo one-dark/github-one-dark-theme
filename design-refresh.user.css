@@ -50,7 +50,7 @@ domain("gist.github.com") {
 
     /* Button colors */
     --btn: var(--white-3);
-    --btn-border: #4e4e4e;
+    --btn-border: #5d5c5c;
     --btn-hover: #414243;
     --btn-focused: #333333;
 
@@ -199,8 +199,8 @@ domain("gist.github.com") {
 
   /** Buttons */
   .btn:not(.btn-primary) {
-    background-color: var(--white-3);
-    border-color: var(--btn);
+    background-color: var(--btn);
+    border-color: var(--btn-border);
     box-shadow: none;
     color: var(--black-1);
   }
@@ -719,7 +719,7 @@ the consistent color palette. */
 
   /** Clone button */
   .file-navigation .get-repo-btn:first-child {
-    border-color: var(--white-3);
+    border-color: var(--btn-border);
   }
 
   /** File table */
