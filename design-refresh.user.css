@@ -267,6 +267,11 @@ domain("gist.github.com") {
     background-color: var(--white-1);
   }
 
+  .form-group .form-control[disabled],
+  .form-group .form-select[disabled] {
+    background-color: var(--white-3);
+  }
+
   /** Header */
   .pagehead {
     border-color: var(--white-3);
