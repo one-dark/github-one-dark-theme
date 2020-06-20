@@ -1920,7 +1920,9 @@ the consistent color palette. */
     color: var(--black-1);
   }
 
-  .menu-item:hover {
+  .menu-item:hover,
+  .menu-item:focus,
+  .menu-item:active {
     background-color: var(--white-2);
   }
 
