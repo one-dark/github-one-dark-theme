@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitHub One Dark Theme (Design Refresh)
 @namespace      github.com/mskelton
-@version        1.1.0
+@version        1.1.1
 @description    Copy of the original theme but adjusted with the design updates feature preview turned on. If the updates refresh becomes a permanent feature, this will become the main theme.
 @author         Mark Skelton
 @license        MIT
@@ -404,7 +404,7 @@ domain("gist.github.com") {
   /** Dashboard activity */
   .commit-tease .AvatarStack-body,
   .AvatarStack-body {
-    background-color: transparent;
+    background-color: transparent !important;
   }
 
   .AvatarStack--right .avatar {
