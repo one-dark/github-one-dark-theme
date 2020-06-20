@@ -114,12 +114,15 @@ domain("gist.github.com") {
   }
 
   /** Links */
-  .link-gray-dark {
+  .link-gray-dark,
+  .link-gray-dark:hover [class*="text"] {
     color: var(--black-1) !important;
   }
 
   .muted-link,
-  .link-gray {
+  .muted-link:hover [class*="text"],
+  .link-gray,
+  .link-gray:hover [class*="text"] {
     color: var(--black-3) !important;
   }
 
@@ -2513,12 +2516,17 @@ the consistent color palette. */
     color: var(--black-1);
   }
 
-  .avatar-before-user-status {
+  .user-status-circle-badge {
+    background-color: var(--white-1);
     border-color: var(--white-3);
   }
 
   .profile-rollup-summarized + .profile-rollup-summarized {
     border-color: var(--white-5);
+  }
+
+  .vcard-username {
+    color: var(--black-4);
   }
 
   /** Existing PR panel */
