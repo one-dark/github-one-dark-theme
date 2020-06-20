@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitHub One Dark Theme (Design Refresh)
 @namespace      github.com/mskelton
-@version        1.0.3
+@version        1.1.0
 @description    Copy of the original theme but adjusted with the design updates feature preview turned on. If the updates refresh becomes a permanent feature, this will become the main theme.
 @author         Mark Skelton
 @license        MIT
@@ -47,6 +47,12 @@ domain("gist.github.com") {
     --blue-5: #405675;
 
     --box-shadow: #4e4e4e26;
+
+    /* Button colors */
+    --btn: var(--white-3);
+    --btn-border: #4e4e4e;
+    --btn-hover: #414243;
+    --btn-focused: #333333;
 
     /* Syntax highlighting */
     --s-background: #282c34;
@@ -191,7 +197,7 @@ domain("gist.github.com") {
   /** Buttons */
   .btn:not(.btn-primary) {
     background-color: var(--white-3);
-    border-color: #4e4e4e;
+    border-color: var(--btn);
     box-shadow: none;
     color: var(--black-1);
   }
@@ -199,13 +205,13 @@ domain("gist.github.com") {
   .btn:not(.btn-primary).hover,
   .btn:not(.btn-primary):hover,
   [open] > .btn:not(.btn-primary) {
-    background-color: #414243;
+    background-color: var(--btn-hover);
   }
 
   .btn:not(.btn-primary).selected,
   .btn:not(.btn-primary):active,
   .btn:not(.btn-primary)[aria-selected="true"] {
-    background-color: #333333;
+    background-color: var(--btn-focused);
   }
 
   .btn:not(.btn-primary) .octicon {
@@ -2653,6 +2659,25 @@ the consistent color palette. */
   .label-select-menu .select-menu-item:hover,
   .label-select-menu .select-menu-item[aria-selected="true"] {
     background-color: var(--white-2);
+  }
+
+  /** Clone url */
+  .clone-url-button > .clone-url-link {
+    background: var(--btn);
+    border-color: var(--btn-border) !important;
+    box-shadow: none !important;
+    color: var(--black-1) !important;
+    text-shadow: none !important;
+  }
+
+  .clone-url-button > .clone-url-link:hover {
+    background: var(--btn-hover);
+  }
+
+  .clone-url-button > .clone-url-link:active,
+  .clone-url-button > .clone-url-link.selected,
+  .clone-url-button > .clone-url-link.selected:hover {
+    background: var(--btn-focused);
   }
 
   /** Misc */
