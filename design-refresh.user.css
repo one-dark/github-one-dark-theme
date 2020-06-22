@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitHub One Dark Theme (Design Refresh)
 @namespace      github.com/mskelton
-@version        1.1.1
+@version        1.1.2
 @description    Copy of the original theme but adjusted with the design updates feature preview turned on. If the updates refresh becomes a permanent feature, this will become the main theme.
 @author         Mark Skelton
 @license        MIT
@@ -2460,8 +2460,8 @@ the consistent color palette. */
     color: #24292e !important;
   }
 
-  .flash-warn a,
-  .flash-warn .btn-link {
+  .flash-warn a:not(.btn-primary),
+  .flash-warn .btn-link:not(.btn-primary) {
     color: #0366d6;
   }
 
