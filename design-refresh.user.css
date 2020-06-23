@@ -2460,8 +2460,8 @@ the consistent color palette. */
     color: #24292e !important;
   }
 
-  .flash-warn a,
-  .flash-warn .btn-link {
+  .flash-warn a:not(.btn-primary),
+  .flash-warn .btn-link:not(.btn-primary) {
     color: #0366d6;
   }
 
