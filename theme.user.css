@@ -46,7 +46,13 @@ domain("gist.github.com") {
     --blue-4: #34465f;
     --blue-5: #405675;
 
-    --box-shadow: #5d5d5d26;
+    --box-shadow: #4e4e4e26;
+
+    /* Button colors */
+    --btn: var(--white-3);
+    --btn-border: #5d5c5c;
+    --btn-hover: #414243;
+    --btn-focused: #333333;
 
     /* Syntax highlighting */
     --s-background: #282c34;
@@ -108,12 +114,15 @@ domain("gist.github.com") {
   }
 
   /** Links */
-  .link-gray-dark {
+  .link-gray-dark,
+  .link-gray-dark:hover [class*="text"] {
     color: var(--black-1) !important;
   }
 
   .muted-link,
-  .link-gray {
+  .muted-link:hover [class*="text"],
+  .link-gray,
+  .link-gray:hover [class*="text"] {
     color: var(--black-3) !important;
   }
 
@@ -190,50 +199,30 @@ domain("gist.github.com") {
 
   /** Buttons */
   .btn:not(.btn-primary) {
-    border-color: #4f5457;
-  }
-
-  .btn:not(.btn-primary):not(.btn-outline) {
-    background-color: #454c4e;
-    background-image: linear-gradient(-180deg, #505658, #414648 90%);
+    background-color: var(--btn);
+    border-color: var(--btn-border);
+    box-shadow: none;
     color: var(--black-1);
   }
 
-  .btn:not(.btn-primary):not(.btn-outline).hover,
-  .btn:not(.btn-primary):not(.btn-outline):hover {
-    background-color: #3e4446;
-    background-image: linear-gradient(-180deg, #4c5153, #3d4244 90%);
-    border-color: #4d5456;
+  .btn:not(.btn-primary).hover,
+  .btn:not(.btn-primary):hover,
+  [open] > .btn:not(.btn-primary) {
+    background-color: var(--btn-hover);
   }
 
   .btn:not(.btn-primary).selected,
-  .btn:not(.btn-primary)[aria-selected="true"],
-  .btn:not(.btn-primary).selected:hover,
-  .btn:not(.btn-primary)[aria-selected="true"]:hover {
-    background-color: var(--white-1);
-    background-image: none;
-    border-color: var(--white-3);
+  .btn:not(.btn-primary):active,
+  .btn:not(.btn-primary)[aria-selected="true"] {
+    background-color: var(--btn-focused);
   }
 
-  .btn-outline {
-    background-color: var(--white-1);
-    color: var(--blue-1);
+  .btn:not(.btn-primary) .octicon {
+    color: var(--black-2);
   }
 
-  .btn-outline.disabled,
-  .btn-outline:disabled,
-  .btn-outline[aria-disabled="true"] {
-    background-color: var(--white-1);
-    border-color: var(--white-3) !important;
-    color: var(--black-4);
-  }
-
-  .btn-outline.selected,
-  .btn-outline:active,
-  .btn-outline:hover,
-  .btn-outline[aria-selected="true"],
-  [open] > .btn-outline {
-    border-color: #0366d6;
+  .btn-outline:not(.btn-primary) {
+    color: #6eadff;
   }
 
   .btn-danger {
@@ -263,7 +252,8 @@ domain("gist.github.com") {
   .form-control,
   .form-select {
     background-color: var(--white-1);
-    border-color: var(--white-4);
+    border-color: var(--white-3);
+    box-shadow: none;
     color: var(--black-1);
   }
 
@@ -275,6 +265,11 @@ domain("gist.github.com") {
   .form-group .form-control:focus,
   .input-contrast:focus {
     background-color: var(--white-1);
+  }
+
+  .form-group .form-control[disabled],
+  .form-group .form-select[disabled] {
+    background-color: var(--white-3);
   }
 
   /** Header */
@@ -323,12 +318,12 @@ domain("gist.github.com") {
   /** Boxes */
   .Box {
     background-color: var(--white-1);
-    border-color: var(--white-4);
+    border-color: var(--white-3);
   }
 
   .Box-header {
     background-color: var(--white-2);
-    border-color: var(--white-4);
+    border-color: var(--white-3);
   }
 
   .Box-header--blue {
@@ -359,6 +354,8 @@ domain("gist.github.com") {
 
   .Box-row--hover-blue:hover {
     background-color: var(--blue-3);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
   }
 
   .Box-row--focus-gray.navigation-focus {
@@ -407,7 +404,7 @@ domain("gist.github.com") {
   /** Dashboard activity */
   .commit-tease .AvatarStack-body,
   .AvatarStack-body {
-    background-color: transparent;
+    background-color: transparent !important;
   }
 
   .AvatarStack--right .avatar {
@@ -435,12 +432,29 @@ domain("gist.github.com") {
   /** Popovers */
   .SelectMenu-modal {
     background-color: var(--white-2);
+    box-shadow: 0 8px 24px var(--box-shadow);
+  }
+
+  .SelectMenu-header {
+    border-color: var(--white-5);
+  }
+
+  @media (hover: hover) {
+    .SelectMenu-closeButton:hover,
+    body:not(.intent-mouse) .SelectMenu-closeButton:focus {
+      color: var(--black-1);
+    }
   }
 
   @media (min-width: 544px) {
     .SelectMenu-modal {
       border-color: var(--white-4);
     }
+  }
+
+  .SelectMenu-tabs,
+  .SelectMenu-tab {
+    box-shadow: inset 0 -1px 0 var(--white-5);
   }
 
   .SelectMenu-list {
@@ -608,6 +622,7 @@ the consistent color palette. */
   .topic-tag,
   .topic-tag-action {
     background-color: var(--blue-3);
+    color: var(--blue-1);
   }
 
   .topic-tag-link:hover {
@@ -709,7 +724,7 @@ the consistent color palette. */
 
   /** Clone button */
   .file-navigation .get-repo-btn:first-child {
-    border-color: var(--white-3);
+    border-color: var(--btn-border);
   }
 
   /** File table */
@@ -748,18 +763,19 @@ the consistent color palette. */
   }
 
   /** Labels */
+  .label,
   .Label {
-    color: var(--white-1);
+    border-color: var(--white-3);
   }
 
-  .Label--gray {
-    background-color: var(--white-5);
+  .Label--gray,
+  .Label--outline {
     color: var(--black-3);
   }
 
   .Label--gray-darker {
     background-color: var(--black-2);
-    color: var(--white-1);
+    color: var(--black-1);
   }
 
   .Label--outline {
@@ -773,6 +789,12 @@ the consistent color palette. */
     color: #000;
     background-color: var(--blue-1);
     border-color: var(--blue-1);
+  }
+
+  .Label--green,
+  .Label--outline-green {
+    color: #22863a;
+    border-color: #28a745;
   }
 
   /** Markdown */
@@ -999,8 +1021,11 @@ the consistent color palette. */
   .pagination a,
   .pagination em,
   .pagination span {
-    background: var(--white-1);
-    border-color: var(--white-3);
+    color: var(--black-1);
+  }
+
+  .pagination .next_page,
+  .pagination .previous_page {
     color: var(--blue-1);
   }
 
@@ -1010,8 +1035,7 @@ the consistent color palette. */
   .pagination .gap:hover,
   .pagination [aria-disabled="true"],
   .pagination [aria-disabled="true"]:hover {
-    background-color: var(--white-2);
-    color: var(--white-4);
+    color: var(--black-2);
   }
 
   .pagination a:focus,
@@ -1020,7 +1044,6 @@ the consistent color palette. */
   .pagination em:hover,
   .pagination span:focus,
   .pagination span:hover {
-    background-color: var(--white-5);
     border-color: var(--white-3);
   }
 
@@ -1258,6 +1281,10 @@ the consistent color palette. */
     border-color: var(--white-3);
   }
 
+  .branch-action-item.border-gray-dark {
+    border-color: var(--white-3) !important;
+  }
+
   .branch-action-body .merge-branch-form,
   .branch-action-body .merge-message {
     background-color: var(--white-2);
@@ -1373,8 +1400,9 @@ the consistent color palette. */
   /** Header counts */
   .social-count {
     background-color: var(--white-1);
-    color: var(--black-1);
     border-color: var(--white-3);
+    box-shadow: none;
+    color: var(--black-1);
   }
 
   .social-count:hover {
@@ -1705,7 +1733,8 @@ the consistent color palette. */
 
   /** PR commits tab */
   .table-list-bordered,
-  .table-list-bordered .table-list-cell:first-child {
+  .table-list-bordered .table-list-cell:first-child,
+  .table-list-bordered .table-list-cell:last-child {
     border-color: var(--white-5);
   }
 
@@ -1838,6 +1867,7 @@ the consistent color palette. */
 
   .UnderlineNav {
     border-color: var(--white-3);
+    box-shadow: inset 0 -1px 0 var(--white-3);
   }
 
   .UnderlineNav-item {
@@ -1896,9 +1926,12 @@ the consistent color palette. */
 
   .menu-item {
     border-color: var(--white-3);
+    color: var(--black-1);
   }
 
-  .menu-item:hover {
+  .menu-item:hover,
+  .menu-item:focus,
+  .menu-item:active {
     background-color: var(--white-2);
   }
 
@@ -2427,6 +2460,11 @@ the consistent color palette. */
     color: #24292e !important;
   }
 
+  .flash-warn a:not(.btn-primary),
+  .flash-warn .btn-link:not(.btn-primary) {
+    color: #0366d6;
+  }
+
   /** Side nav */
   .SideNav {
     background-color: var(--white-2);
@@ -2495,12 +2533,17 @@ the consistent color palette. */
     color: var(--black-1);
   }
 
-  .avatar-before-user-status {
+  .user-status-circle-badge {
+    background-color: var(--white-1);
     border-color: var(--white-3);
   }
 
   .profile-rollup-summarized + .profile-rollup-summarized {
     border-color: var(--white-5);
+  }
+
+  .vcard-username {
+    color: var(--black-4);
   }
 
   /** Existing PR panel */
@@ -2643,6 +2686,25 @@ the consistent color palette. */
     background-color: var(--white-2);
   }
 
+  /** Clone url */
+  .clone-url-button > .clone-url-link {
+    background: var(--btn);
+    border-color: var(--btn-border) !important;
+    box-shadow: none !important;
+    color: var(--black-1) !important;
+    text-shadow: none !important;
+  }
+
+  .clone-url-button > .clone-url-link:hover {
+    background: var(--btn-hover);
+  }
+
+  .clone-url-button > .clone-url-link:active,
+  .clone-url-button > .clone-url-link.selected,
+  .clone-url-button > .clone-url-link.selected:hover {
+    background: var(--btn-focused);
+  }
+
   /** Misc */
   .box-shadow {
     box-shadow: 0 1px 1px #ffffff1a !important;
@@ -2664,11 +2726,15 @@ the consistent color palette. */
     fill: var(--white-5);
   }
 
-  .user-status-message-wrapper {
-    color: #24292e !important;
-  }
-
   .saved-reply-form {
     border-color: var(--white-4);
+  }
+
+  .box-shadow-large {
+    box-shadow: 0 8px 24px var(--box-shadow) !important;
+  }
+
+  .follow-list .follow-list-info {
+    color: var(--black-3);
   }
 }
