@@ -2737,4 +2737,9 @@ the consistent color palette. */
   .follow-list .follow-list-info {
     color: var(--black-3);
   }
+
+  .js-previewable-comment-form,
+  .js-upload-markdown-image {
+    background-color: var(--white-1) !important;
+  }
 }
