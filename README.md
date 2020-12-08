@@ -5,6 +5,10 @@
 
 Relieve the stress on your eyes when using GitHub with this custom dark theme! This uses a nice gray color rather than pure black to prevent overly contrasting colors.
 
+## Update December 2020
+
+While this theme was a great project for a while, GitHub release a built-in dark theme so I will no longer be maintaining this repo. As a result I am no longer accepting contributions and I will be archiving this repo.  I appreciate the help on this theme and if anyone wishes to use this code, it is MIT licensed so you are free to use it!
+
 ## Installation
 
 - Install the Stylus extension for [Chrome/Edge](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en) or [FireFox](https://addons.mozilla.org/en-US/firefox/addon/styl-us)
